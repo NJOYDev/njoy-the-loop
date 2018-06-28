@@ -9,6 +9,8 @@
         "custom-category-autoship": "/auto-ship/"
     },
     "page": {},
-    "product": {}
+    "product": {
+        "product-the-loop": "/the-loop/"
+    }
   }
 }
