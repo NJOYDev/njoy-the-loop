@@ -1,0 +1,64 @@
+<nav class="navPages">
+	<ul class="navPages-list">
+			<li class="navPages-item">
+				<a class="navPages-action has-subMenu navPages-action--toplevel sales" href="https://njoy.com/sales/">
+					Sales
+				</a>
+			</li>
+	</ul>
+	<ul class="navPages-list navPages-list--user">
+		{{#if currency_selector.currencies.length '>' 1}}
+			<li class="navPages-item">
+				<a class="navPages-action has-subMenu" href="#" data-collapsible="navPages-currency" aria-controls="navPages-currency" aria-expanded="false">
+					{{lang 'common.currency' code=currency_selector.active_currency_code}} <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-down"></use></svg></i>
+				</a>
+				<div class="navPage-subMenu" id="navPages-currency" aria-hidden="true" tabindex="-1">
+					<ul class="navPage-subMenu-list">
+						{{#each currency_selector.currencies}}
+						<li class="navPage-subMenu-item">
+								<a class="navPage-subMenu-action navPages-action" href="{{{switch_url}}}">
+									{{#if is_active}}
+										<strong>{{name}}</strong>
+									{{else}}
+										{{name}}
+									{{/if}}
+								</a>
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</li>
+		{{/if}}
+		{{#if settings.gift_certificates_enabled}}
+			<li class="navPages-item">
+				{{#if customer}}
+				<a class="navPages-action" href="{{urls.auth.login}}">Sign In</a>
+				{{else settings.account_creation_enabled}}
+					<a class="navPages-action" href="{{urls.auth.create_account}}">Sign Up</a>
+				{{/if}}
+			</li>
+		{{/if}}
+		<li class="navUser-item navUser-item--account">
+			{{#if customer}}
+				<a class="navUser-action" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+				<a class="navUser-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+			{{else}}
+				<a class="navUser-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
+				{{#if settings.account_creation_enabled}}
+					<span class="navUser-or">{{lang 'common.or'}}</span> <a class="navUser-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+				{{/if}}
+			{{/if}}
+		</li>
+		<div class="stores">
+			<a href="https://njoy.com/store-locator/" class="navPages-action">Store Locator</a>
+		</div>
+		<div>
+			<a class="cart-action hide-on-mobile" data-cart-preview data-dropdown="cart-preview-dropdown" data-options="align:right" style="margin-left: 100px;">
+				<span class="icon icon--cart">
+					<svg><use xlink:href="#icon-cart-icon"></use></svg>
+				</span>
+				<span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+			</a>
+		</div>
+	</ul>
+</nav>

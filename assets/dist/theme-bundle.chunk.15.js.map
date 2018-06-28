@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./assets/js/theme/home.js"],"names":["Home"],"mappings":";;;;;;;;8yBAEqBA,K,wLAAa,8D,iEAAbA,I","file":"theme-bundle.chunk.15.js","sourcesContent":["import PageManager from './page-manager';\n\nexport default class Home extends PageManager {}\n\n\n\n// WEBPACK FOOTER //\n// ./assets/js/theme/home.js"],"sourceRoot":""}

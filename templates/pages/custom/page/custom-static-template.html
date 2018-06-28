@@ -1,0 +1,73 @@
+{{#partial "page"}}
+
+
+<main class="page static-page">
+    <div class="static__img--wrapper">
+        <div class="static__image"></div>
+        <div class="static__subheading"></div>
+        <h1 class="page-heading">{{ page.title }}</h1>
+    </div>
+
+    <div class="static-page--inner">
+        <nav class="side-navBar">
+            <div class="mobile-dropdown">Learn 
+                <span class="icon icon--angle-down">
+                    <svg><use xlink:href="#icon-angle-down"></use></svg>
+                </span>
+            </div>
+            <ul class="side-navBarSection">
+                {{#each pages}}
+                    {{#unless name '==' 'NJOY The Switch'}}
+                        <li class="side-navBar-list 
+                        {{#contains name '&'}}{{#replace ' & ' (toLowerCase name)}}{{else}}{{name}}{{/replace}}-staticNav {{/contains}}
+                        {{#replace ' ' (toLowerCase name)}}{{else}}{{toLowerCase name}}{{/replace}}-staticNav"><a href="{{url}}">{{name}}</a></li>
+                    {{/unless}}
+                    <ul class="side-navBar--children">
+                        {{#each children}}
+                            <li class="side-navBar-list--children {{#replace ' ' (toLowerCase name)}}{{else}}{{toLowerCase name}}{{/replace}}-staticNav"><a href='{{url}}'>{{name}}</a>
+                                {{#if children}}
+                                    <span class="icon icon--add">
+                                        <svg><use xlink:href="#icon-add"></use></svg>
+                                    </span>
+                                    <span class="icon icon--remove">
+                                        <svg><use xlink:href="#icon-remove"></use></svg>
+                                    </span>
+                                {{/if}}
+                            </li>
+                            <ul class="side-navBar--children-alt">
+                                {{#each children}}
+                                    <a href="{{url}}">
+                                        <li class="side-navBar-list--children-alt {{#replace ' ' (toLowerCase name)}}{{else}}{{toLowerCase name}}{{/replace}}-staticNav">{{name}}</li>
+                                    </a>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            </ul>
+        </nav>
+        <div class="page-content page-content--centered">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+            {{else}}
+                <p>{{{page.content}}}</p>
+            {{/replace}}
+        </div>
+    </div>
+    
+    {{#if page.feed}}
+        <ul>
+            {{#each page.feed}}
+                <li>
+                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                    <p>{{content}}</p>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+</main>
+
+{{/partial}}
+
+{{> layout/base}}
+

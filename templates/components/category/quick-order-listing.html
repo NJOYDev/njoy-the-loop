@@ -1,0 +1,85 @@
+<button class="quickOrder__addAll button button--primary">{{lang 'quick_order.addall_defaultText'}}</button> {{!-- add all button --}}
+
+<ul id="quickOrder">
+    {{#each category.products}}
+    <li
+            {{!-- check whether this item should have product options --}}
+            {{#all
+            (if stock_level '!==' 0)
+    has_options
+    }}
+    class="quickOrder__item quickOrder__item--hasOptions {{#if ../../with_options}} quickOrder__item--disabled {{/if}}"
+    item-url="{{url}}"
+    item-id={{id}}
+
+    {{else}}
+    class="quickOrder__item {{#if ../../with_options}} quickOrder__item--disabled {{/if}}"
+    {{/all}}
+    >
+    {{!-- each item requires a form ("enctype" attribute is required) --}}
+    <form class="quickOrder__form" action="/cart.php" method="post" enctype="multipart/form-data" data-cart-item-add>
+
+        <div class="quickOrder__main">
+
+            <a class="quickOrder__link" href="{{url}}">
+                <img class="quickOrder__img lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'gallery_size' (cdn ../theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+            </a>
+            <h4 class="quickOrder__name"><a class="quickOrder__link" href="{{url}}">{{name}}</a></h4>
+
+            {{#and
+            (if stock_level '!==' 0)
+            show_cart_action
+            }}
+            <div class="quickOrder__actions">
+
+                {{!-- each form requires these two hidden inputs --}}
+                <input type="hidden" name="action" value="add">
+                <input type="hidden" name="product_id" value="{{id}}">
+
+                <div class="quickOrder__qtyContainer">
+                    <span class="quick_Order__qtyLabel">Quantity: </span>
+                    {{!-- item quantity input box --}}
+                    <input class="quickOrder__qty" name="qty[]" type="number" value="0" min="0" aria-live="polite">
+                </div>
+                {{!-- container for product options --}}
+                {{#all
+                (if stock_level '!==' 0)
+                has_options
+                }}
+                <div class="quickOrder__options"></div>
+                <!-- <div class="quickOrder__options"></div> -->
+                <p class="quickOrder__price">{{price.without_tax.formatted}}</p>
+                {{!-- click this to add this item to cart --}}
+                <button class="quickOrder__add button button--primary" type="button">
+                    {{#if ../../with_options}}
+                    {{lang 'quick_order.addItem_wait'}}
+                    {{else}}
+                    {{lang 'quick_order.addItem_defaultText'}}
+                    {{/if}}
+                </button>
+                <span class="quickOrder__message"></span>
+                {{/all}}
+            </div>
+
+            {{!-- print message for why the item is unavailable --}}
+            {{else}}
+            <strong class="quickOrder__unavailable">
+                {{#if stock_level '===' 0}}
+                {{lang 'quick_order.out_of_stock'}}
+                {{else if show_cart_action '===' false}}
+                {{lang 'quick_order.unavailable'}}
+                {{/if}}
+            </strong>
+            {{/and}}
+        </div>
+
+    </form>
+    </li>
+    {{/each}}
+</ul>
+
+<button class="quickOrder__addAll button button--primary">{{lang 'quick_order.addall_defaultText'}}</button> {{!-- add all button --}}
+
+{{> components/common/paginator pagination.category}}
+
+<div class="loadingOverlay quickOrder-loading"></div>

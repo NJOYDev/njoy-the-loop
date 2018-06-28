@@ -1,0 +1,16 @@
+
+
+{{#if display_name '===' 'Auto Ship'}}
+    {{> components/custom/fake-select-box}}
+{{/if}}
+<div class="form-field js-{{#replace ' ' (toLowerCase display_name)}}{{else}}js-{{toLowerCase display_name}}{{/replace}}" data-product-attribute="set-select">
+    <label class="form-label form-label--alternate form-label--inlineSmall js-{{#replace ' ' (toLowerCase display_name)}}{{else}}js-{{toLowerCase display_name}}{{/replace}}" for="attribute_{{id}}">
+        {{ this.display_name }}
+    </label>
+
+    <select class="form-select form-select--small" name="attribute[{{this.id}}]" id="attribute_{{id}}" {{#if required}}required{{/if}}>
+        {{#each this.values}}
+        <option data-product-attribute-value="{{id}}" value="{{id}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+        {{/each}}
+    </select>
+</div>

@@ -1,0 +1,61 @@
+---
+category:
+shop_by_price: true
+products:
+limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{!-- this will enable quick order on the category page --}}
+{{inject 'quickOrder' true}}
+
+{{inject 'addItem_defaultText' (lang 'quick_order.addItem_defaultText')}}
+{{inject 'addItem_addingText' (lang 'quick_order.addItem_addingText')}}
+{{inject 'addItem_addedText' (lang 'quick_order.addItem_addedText')}}
+{{inject 'addItem_unavailable' (lang 'quick_order.addItem_unavailable')}}
+{{inject 'addItem_wait' (lang 'quick_order.addItem_wait')}}
+{{inject 'addall_defaultText' (lang 'quick_order.addall_defaultText')}}
+{{inject 'addall_addingText' (lang 'quick_order.addall_addingText')}}
+
+{{#partial "head"}}
+{{#if pagination.category.previous}}
+<link rel="prev" href="{{pagination.category.previous}}">
+{{/if}}
+{{#if pagination.category.next}}
+<link rel="next" href="{{pagination.category.next}}">
+{{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+<div class="container--auto-ship">
+    <div class="category-landing__heading auto-ship">
+        <h1 class="category-landing--title">
+            Never run out <br>
+            of NJOY with our <br>
+            Auto-Ship Program
+        </h1>
+        <p class="category-landing--subtitle">Make your life easier by signing up for NJOY's Auto-Ship, get your favorite flavor delivered to your doorstep</p>
+        <img src="{{getImage category.image 'gallery_size' (cdn theme_settings.default_image_category)}}" alt="{{category.name}}" class="category-landing--image">
+        <div class="category-landing--CTA">
+            <p class="CTA__step1">Select your favorite product. Select 14, 30, or 60 day shipments.</p>
+            <p class="CTA__step2">10% off + Free Shipping. NJOY!</p>
+            <p class="CTA__step3">no fees &middot; no commitment &middot; cancel anytime</p>
+        </div>
+    </div>
+    <div class="dailies">
+        {{#if category.products}}
+        {{#contains (pluck category.products 'has_options') true}}
+        {{inject 'quickOrder_withOptions' true}}
+        {{> components/category/quick-order-listing with_options=true }}
+        {{else}}
+        {{> components/category/quick-order-listing }}
+        {{/contains}}
+        {{else}}
+        <p>{{lang 'categories.no_products'}}</p>
+        {{/if}}
+    </div>
+</div>
+
+
+
+{{/partial}}
+{{> layout/base}}

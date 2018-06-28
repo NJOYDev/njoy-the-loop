@@ -1,0 +1,16 @@
+
+<form action="{{urls.compare}}" method='POST' data-product-compare>
+    {{#if theme_settings.product_list_display_mode '===' 'grid'}}
+        {{> components/products/grid products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
+    {{else}}
+        {{> components/products/list products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
+    {{/if}}
+</form>
+{{#if banners.bottom}}
+<div class="banners video-container" data-banner-location="bottom">
+    <div class="banner">
+        {{{limit banners.bottom 1}}}
+    </div>
+</div>
+{{/if}}
+{{> components/common/paginator pagination.category}}

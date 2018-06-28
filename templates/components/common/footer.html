@@ -1,0 +1,138 @@
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <section class="footer-info">
+            <article class="footer-info-col footer-info-col--small footer-webpages">
+                <h5 class="footer-info-heading">Learn About Vaping 
+                    <div class="footer__toggle">
+                        <svg><use xlink:href="#icon-angle-down"></use></svg>
+                    </div>
+                </h5>
+                <ul class="footer-info-list">
+                    <li>
+                        <a href="/science-behind-vaping/">Science Behind Vaping</a>
+                    </li>
+                    <li>
+                        <a href="/whats-an-e-cig">What's an E-Cig</a>
+                    </li>
+                    <li>
+                        <a href="/history-of-e-cigs">History of E-Cigs</a>
+                    </li>
+                    <li>
+                        <a href="/researchers">Researchers</a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small footer-customer-service">
+                <h5 class="footer-info-heading">Customer Service
+                    <div class="footer__toggle">
+                        <svg><use xlink:href="#icon-angle-down"></use></svg>
+                    </div>
+                </h5>
+                <ul class="footer-info-list">
+                    <li>
+                        <a href="/faq">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="/account.php?action=order_status">My Orders</a>
+                    </li>
+                    <li>
+                        <a href="/satisfaction-guarantee">Satisfaction Guarantee</a>
+                    </li>
+                    <li>
+                        <a href="/warning">Warning</a>
+                    </li>
+                    <li>
+                        <a href="/deals">Deals</a>
+                    </li>
+                    <li>
+                        <a href="/store-locator">Find A Store</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="footer-info-col footer-info-col--small footer-about-us">
+                <h5 class="footer-info-heading">About NJOY
+                    <div class="footer__toggle">
+                        <svg><use xlink:href="#icon-angle-down"></use></svg>
+                    </div>
+                </h5>
+                <ul class="footer-info-list">
+                    <li>
+                        <a href="/about-us">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/vaping-advocacy">Vaping Advocacy</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/sales">Trade Partners</a>
+                    </li>
+                </ul>
+            </article>
+            <article class="footer-info-col footer-info-col--small footer-right">
+                <div class="footer-newsletter">
+                    <h5 class="footer-info-heading">Subscribe</h5>
+                        {{> components/common/footer-subscription-form}}
+                </div>
+                <div class="footer-store-locator">
+                    <h5 class="footer-info-heading"><a href="/find-a-store" target="_blank">Store Locator</a></h5>
+                    <div class="store-locator-icon">
+                        <a href="/find-a-store" target="_blank">
+                            <span class="icon icon--store-locator">
+                                <svg><use xlink:href="#icon-locator-icon"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h5 class="footer-info-heading">Follow Us</h5>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/njoyvape">
+                            <span class="icon icon--facebook">
+                                <svg><use xlink:href="#icon-facebook-f"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="social-icon">
+                        <a href="https://twitter.com/njoyvape">
+                            <span class="icon icon--twitter">
+                                <svg><use xlink:href="#icon-twitter"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/njoyvape/">
+                            <span class="icon icon--instagram">
+                                <svg><use xlink:href="#icon-instagram"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div class="bottom-footer">
+            <div class="privacy">
+                <a href="/privacy-policy">Privacy Policy</a>
+            </div>
+            <div class="terms">
+                <a href="/terms_conditions">Terms &amp; Conditions</a>
+            </div>
+            {{#if theme_settings.show_copyright_footer}}
+                <div class="footer-copyright">
+                    <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} All Rights Reserved.</p>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</footer>
+<script>
+    window.__taxman__ = {
+        storeHash: '59e97impct'
+    }
+ </script>
+ <script src="https://taxman.intuitsolutions-apps.net/assets/storefront/taxman.min.js"></script>

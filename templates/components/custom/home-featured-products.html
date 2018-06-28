@@ -1,0 +1,54 @@
+<div class="featured-product--container">
+    <section class="featured-product-carousel"
+    data-slick='{
+        "dots": true,
+        "infinite": true,
+        "mobileFirst": true,
+        "slidesToShow":1,
+        "slidesToScroll": 1,
+        "arrows": false,
+        "lazyLoad": "progressive",
+        "responsive": [
+            {
+                "breakpoint": 550,
+                "settings": {
+                    "slidesToShow": 3,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 800,
+                "settings": {
+                    "slidesToShow": 5,
+                    "slidesToScroll": 1,
+                    "dots": false,
+                    "arrows": false
+                }
+            }
+        ]
+
+    }'
+    >
+    {{#each products.featured}}
+        <div class="product-card">
+            <a href="{{url}}">
+                <img class="card-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+                <p class="card-category">
+                    {{#each custom_fields}}
+                        {{#if name '==' 'subcategory'}}
+                            {{value}}
+                        {{/if}}
+                    {{/each}}
+                </p>
+                <div class="card-title">
+                    {{name}}
+                </div>
+                <div class="card-text">
+                    {{> components/products/price price=price customer=customer}}
+                </div>
+            </a>
+        </div>
+    {{/each}}
+
+</section>
+</div>

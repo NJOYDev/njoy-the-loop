@@ -1,0 +1,30 @@
+<!-- HTML markup -->
+<div class="customTabs productTabs">
+    <div class="product-carousel--title">
+        NJOY Products
+    </div>
+    <!-- our tab links -->
+    <ul class="tabs" data-tab>
+        <li class="tab is-active">
+            <a class="tab-title" href="#myTab-one">Daily Disposable E-Cigs</a>
+        </li>
+        <li class="tab">
+            <a class="tab-title" href="#myTab-two">Convenience Vaping</a>
+        </li>
+        <li class="tab">
+            <a class="tab-title" href="#myTab-three">Switch Kits</a>
+        </li>
+    </ul>
+    <!-- our tab content -->
+    <div class="tabs-contents">
+        <div class="tab-content is-active" id="myTab-one">
+            {{> components/custom/daily-product-carousel}}
+        </div>
+        <div class="tab-content" id="myTab-two">
+            {{> components/custom/convenience-product-carousel}}
+        </div>
+        <div class="tab-content" id="myTab-three">
+            {{> components/custom/switch-product-carousel}}
+        </div>
+    </div>
+</div>

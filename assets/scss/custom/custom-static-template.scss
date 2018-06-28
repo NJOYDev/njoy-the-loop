@@ -1,0 +1,386 @@
+// text-colors
+$text-color-dark: #000;
+$text-color-light: #fff;
+$text-color-med: #A8A8A8;
+$text-color-darker: #d4d4d4;
+
+$container-color: #F7F7F9;
+
+// page gutters
+$desktop-gutter: 0 12rem;
+$mobile-gutter: 0 1rem;
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+
+$heading-font: "Avenir-Light";
+$heading-font-dark: "Avenir-Light";
+$heading-font-bold: "Avenir-Light";
+
+.static__image {
+    height: 140px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+    width: 100%;
+    
+    @media only screen and (min-width: 430px) {
+        height: 200px;
+    }
+    
+    @include breakpoint("small") {// 501px and up
+        height: 260px;
+    }
+    
+    @include breakpoint("medium") {// 801px and up
+       height: 370px;
+    }
+    
+    @media only screen and (min-width: 1145px) {
+        background-size: cover;
+    }
+    
+    @include breakpoint("large") {// 1140px and up
+        background-size: cover;
+        height: 410px;
+        position: relative;
+         
+        @media only screen and (min-width: 1320px) {
+            height: 420px;
+        }
+        
+        @media only screen and (min-width: 1339px) {
+            height: 450px
+        }
+        
+        @media only screen and (min-width: 1449px) {
+            height: 500px;
+        }
+    }
+}
+
+
+
+.static__img--wrapper {
+    position: relative;
+}
+
+.static-page--bg {
+    display: none;
+}
+
+.static-page .page-heading {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    color: $text-color-dark;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding: $mobile-gutter;
+    
+    
+    @include breakpoint("medium") {// 801px and up
+        bottom: 3rem;
+        position: absolute;
+        color: $text-color-light;
+        font-size: 70px;
+        padding: $mobile-gutter;
+        
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+            
+        }
+        
+    }
+}
+
+.static__subheading {
+    color: $text-color-dark;
+
+    @include breakpoint("medium") {// 801px and up
+        position: absolute;
+        bottom: 2em;
+        color: $text-color-light;
+        padding: $mobile-gutter;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+            
+        }
+    }
+}
+
+.static-page--inner {
+    padding: $mobile-gutter;
+    display: flex;
+    flex-direction: column;
+    
+    @include breakpoint("medium") {// 801px and up
+        margin-top: 2rem;
+        display: inline-block;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+            margin-top: 4rem;
+        }
+    }
+}
+
+.side-navBarSection {
+    margin: 0;
+    border: 1px solid $text-color-dark;
+    padding: 1rem;
+    display: none;
+
+    @include breakpoint("medium") {// 801px and up
+        border: none;
+        padding: 0;
+        display: block;
+        min-width: 200px;
+        
+    }
+}
+
+.side-navBarSection.active {
+    display: block;
+}
+
+
+.side-navBar {
+    order: 1;
+}
+
+.page-heading {
+    order: 2;
+}
+
+.static__subheading {
+    order: 3;
+    font-size: 13px;
+    
+    @include breakpoint("medium") {// 801px and up
+        font-size: 15px;
+    }
+}
+
+.static-page .page-content {
+    order: 4;
+    padding: 0;
+    margin-top: 2rem;
+    
+    @include breakpoint("medium") {// 801px and up
+        margin-top: 0;
+    }
+}
+
+// display none on any webpages for side nav
+
+.vapelife-staticNav,
+.vapelife2-staticNav,
+.vaping-staticNav,
+.vapebatteries-staticNav,
+.vapejuice-staticNav,
+.vapekits-staticNav,
+.vapepens-staticNav,
+.vapetanks-staticNav,
+.contactus-staticNav,
+.faqs-staticNav,
+.deals-staticNav,
+.myorder-staticNav,
+.satisfactionguarantee-staticNav,
+.warning-staticNav,
+.categoryadvocacy-staticNav, 
+.blog-staticNav,
+.privacypolicy-staticNav,
+.careers-staticNav,
+.storelocator-staticNav,
+.rsssyndication-staticNav,
+.termsconditions-staticNav,
+.shippingreturns-staticNav,
+.myorders-staticNav {
+    display: none;
+}
+
+.mobile-dropdown {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    border: 1px solid $text-color-dark;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 18px;
+
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+.mobile-dropdown .icon {
+    float: right;
+    height: 2rem;
+    width: 1.8rem;
+
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+.mobile-dropdown svg {
+    fill: $text-color-dark;
+}
+
+.side-navBar {
+    
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+        width: 20%;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.side-navBar li { 
+    list-style-type: none;
+    margin: 2rem 0;
+
+}
+
+.side-navBar-list  {
+    font-family: $heading-font-bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    
+    @include breakpoint("medium") {// 801px and up
+        padding-top: 2rem;
+        border-top: 1px solid $text-color-darker;
+    }
+}
+
+.side-navBar--children,
+.side-navBar--children-alt {
+    
+        margin-left: 0;
+    
+}
+
+.side-navBar-list--children  {
+    
+        text-transform: uppercase;
+        font-family: $heading-font;
+        font-size: 16px;
+    
+}
+
+.side-navBar-list--children-alt  {
+    
+        font-size: 14px;
+    
+}
+
+.side-navBar-list--children + .side-navBar--children-alt {
+    display: none;
+}
+
+.side-navBar-list--children .icon--remove {
+    display: none;
+}
+
+.side-navBar-list--children.active .icon--remove {
+    display: block;
+}
+
+.side-navBar-list--children.active .icon--add {
+    display: none;
+}
+
+.icon--remove, .icon--add {
+    float: right;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.side-navBar-list--children svg {
+    fill: $text-color-dark;
+}
+
+
+.side-navBar-list--children.active + .side-navBar--children-alt {
+    display: block;
+}
+
+
+.static-page--inner .page-content {
+    
+    @include breakpoint("medium") {// 801px and up
+        float: right;
+    }
+}
+
+.static-page--inner h2 {
+    text-transform: uppercase;
+    color: $text-color-dark;
+}
+
+.static-page--subheading {
+    display: none;
+}
+
+// subpages link
+
+.page-subpages {
+    text-transform: uppercase;
+    font-family: $heading-font;
+}
+
+.page-subpages .navBar-action {
+    color: $text-color-dark;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+// faq page
+
+.faq__item__question__link {
+    text-decoration: none;
+}
+
+.faq__item {
+    display: none;
+}
+.js-faq-item.faq-active .faq__item__answer {
+    display: block;
+}
+
+.faq__item__question__title:after {
+    content: " ";
+    background-image: url(../img/chevron-down.svg);
+    display: inline-block;
+    width: 50px;
+    fill: $text-color-dark;
+    float: right;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.faq__item__question__title.faq-active:after {
+    transform: rotate(180deg);
+}
+
+// iframes
+
+.embed-container iframe {
+    
+    @include breakpoint("medium") {// 801px and up
+        width: 100%;
+        min-height: 610px;
+    }
+}
+
+// hidden Responsys form in Create Account Page
+.form--email-integration {
+    display: none;
+}

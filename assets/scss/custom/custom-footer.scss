@@ -1,0 +1,265 @@
+// text-colors
+$text-color-dark: #000;
+$text-color-light: #fff;
+$text-color-med: #A8A8A8;
+$text-color-darker: #202020;
+
+$container-color: #F7F7F9;
+
+// page gutters
+$desktop-gutter: 0 12rem;
+$mobile-gutter: 0 1rem;
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+
+$heading-font: "Avenir-Light";
+$heading-font-dark: "Avenir-Light";
+$heading-font-bold: "Avenir-Light";
+
+
+.footer-info {
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: $text-color-darker;
+    margin-top: 3rem;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: 4rem 0;
+    }
+}
+
+.footer .container {
+    background-color: $text-color-darker;
+
+    @include breakpoint("medium") {// 801px and up
+        padding: $mobile-gutter;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+        }
+    }
+}
+
+
+.footer-info-col {
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid $text-color-med;
+
+    @include breakpoint("medium") {// 801px and up
+        @include grid-column(3);
+        border: none;
+        padding-left: 0;
+
+        @include breakpoint("large") {// 1140px and up
+            @include grid-column(3);
+            padding-left: 0;
+
+        }
+    }
+}
+
+.footer-newsletter,
+.footer-store-locator {
+    border-bottom: 1px solid $text-color-med;
+    text-align: left;
+
+    @include breakpoint("medium") {// 801px and up
+        border: none;
+    }
+}
+
+.footer-social {
+    text-align: left;
+}
+
+.footer-info-col svg {
+    fill: $text-color-light;
+    width: 20px;
+    height: 20px;
+}
+
+.footer__toggle {
+    float: right;
+
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+.footer-info-list li a {
+    color: $text-color-med;
+    line-height: 2.5rem;
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+.footer-info-heading {
+    color: $text-color-light;
+    font-family: $heading-font;
+    text-transform: uppercase;
+    font-size: 18px;
+
+    @include breakpoint("medium") {// 801px and up
+        display: block;
+    }
+}
+
+.footer-info-heading a {
+    color: $text-color-light;
+    font-family: $heading-font;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+
+    @include breakpoint("medium") {// 801px and up
+        display: block;
+    }
+}
+
+.footer-info-heading.collapsed {
+    border: none;
+}
+
+
+.footer-info-col {
+    margin-bottom: 2rem;
+}
+
+.footer-info-heading.collapsed ~ .footer-info-list {
+    padding-bottom: 1rem;
+}
+
+.footer-info-list {
+    padding: $mobile-gutter;
+    text-align: left;
+    @include breakpoint("large") {// 1140px and up
+        padding: 0;
+    }
+}
+
+.footer-info-heading.collapsed .footer__toggle svg {
+    transform: rotate(180deg);
+}
+
+.footer .button--primary-light {
+    margin-left: 0;
+}
+
+.footer .footer-info-heading {
+    margin-top: 0;
+    text-align: left;
+    padding: $mobile-gutter;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: 0;
+    }
+}
+
+.footer-newsletter .form-field {
+    margin-bottom: 0;
+}
+
+.footer-newsletter .form {
+    padding: $mobile-gutter;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: 0;
+    }
+}
+
+.footer-newsletter .subscribe-text {
+    text-align: left;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: 1rem 0;
+
+    }
+}
+
+.footer-store-locator .footer-info-heading,
+.footer-social .footer-info-heading,
+.store-locator-icon,
+.social-icon {
+    display: inline-block;
+}
+
+.footer-right .icon {
+    width: 2rem;
+    height: 1.5rem;
+
+    @include breakpoint("large") {// 1140px and up
+
+        margin: 0 2px;
+    }
+}
+
+.footer-right svg {
+    fill: $text-color-light;
+}
+
+.footer-social .footer-info-heading,
+.footer-store-locator .footer-info-heading {
+    margin-top: 1rem;
+}
+
+.footer-newsletter .form-input,
+.footer-newsletter .form-prefixPostfix .button {
+    width: auto;
+    margin-top: 0;
+}
+
+
+.footer-newsletter .form-prefixPostfix.wrap {
+
+    @include breakpoint("large") {// 1140px and up
+        flex-wrap: nowrap;
+    }
+}
+
+.bottom-footer a {
+    color: $text-color-med;
+    text-decoration: none;
+}
+
+.bottom-footer {
+    padding: $mobile-gutter;
+
+    @include breakpoint("medium") {// 801px and up
+        padding: 0;
+    }
+}
+
+.privacy,
+.terms {
+    padding-right: 1rem;
+    font-size: 12px;
+    display: inline-block;
+
+    @include breakpoint("medium") {// 801px and up
+        float: left;
+    }
+
+}
+
+.privacy a,
+.terms a {
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+.footer-copyright {
+    text-align: left;
+
+    @include breakpoint("medium") {// 801px and up
+        float: right;
+        width: 25%;
+
+    }
+}

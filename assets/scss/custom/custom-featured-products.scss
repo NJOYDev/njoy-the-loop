@@ -1,0 +1,33 @@
+.home-featured-product--heading {
+    position: absolute;
+    text-transform: uppercase;
+    color: $text-color-light;
+    top: 1rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    letter-spacing: 5px;
+    font-size: 40px;
+    font-weight: 500;
+
+    @include breakpoint("large") {// 1140px and up
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+}
+
+.featured-products .card-title,
+.featured-products .card-text,
+.card-category {
+    text-align: center;
+}
+
+.card-category {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 12px;
+}
+
+.featured-product--container {
+    margin-top: 3rem;
+}

@@ -1,0 +1,217 @@
+// =============================================================================
+// IntuitSolutions.net - Header
+// =============================================================================
+
+/*
+## top bar
+*/
+.header__topbar {
+	background-color: stencilColor("color-greyLightest");
+}
+
+.header__topbar > .container {
+	padding: 0 1.5rem;
+}
+
+/*
+## main section
+*/
+.header__main {
+	font-size: 0; // for inline-block elements inside
+	margin: 0 auto;
+	padding: 1rem 0;
+	width: 100%;
+	max-width: $layout-widthMax;
+}
+.mobileMenu-toggle .mobileMenu-toggleIcon,
+.mobileMenu-toggle .mobileMenu-toggleIcon::before,
+.mobileMenu-toggle .mobileMenu-toggleIcon::after{
+	background:#515151;
+}
+.mobileMenu-toggle {
+	position: relative;
+	width: 18%;
+	height: 42px;
+	vertical-align: middle;
+
+	@include breakpoint("small") {
+		width: 30%;
+	}
+}
+
+.mobileMenu-toggle .mobileMenu-toggleIcon {
+	top: 21px;
+}
+
+.header__main-logo,
+.header__main-search,
+.header__main-actions {
+	display: inline-block;
+	font-size: 1rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	width: width("3/12");
+	vertical-align: middle;
+}
+
+.header__main-logo {
+	width: 43%;
+	padding: 0;
+	text-align: center;
+
+	@include breakpoint("small") {
+		width: 40%;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	@include breakpoint("medium") {
+		width: width("3/12");
+		text-align: left;
+	}
+}
+
+.header-logo-image {
+	max-height: 42px;
+}
+
+.header__main-search {
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 0;
+	background: stencilColor("color-greyLightest");
+	padding: 0.75rem;
+
+	@include breakpoint("medium") {
+		display: inline-block;
+		position: initial;
+		width: width("5/12");
+		padding: 0 0.75rem;
+		background: #fff;
+	}
+}
+
+.quickSearchResults {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	max-height: 450px;
+	overflow-y: auto;
+	z-index: 25;
+}
+
+.header__main-actions {
+	width: 39%;
+	text-align: right;
+
+	@include breakpoint("small") {
+		width: 30%;
+	}
+
+	@include breakpoint("medium") {
+		width: width("4/12");
+	}
+}
+
+// mobile search toggle is inside .header__main-actions to make styling easier
+.mobileSearch-toggle {
+	display: inline-block;
+	max-height: 40px; // to match "button" class
+
+	@include breakpoint("medium") {
+		display: none;
+	}
+}
+
+.mobileSearch-toggle svg {
+	fill: #fff;
+}
+
+.header__main-actions .button {
+	margin-bottom: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+
+	@include breakpoint("medium") {
+		padding-left: 2.28571rem; // standard button padding
+		padding-right: 2.28571rem; // standard button padding
+	}
+}
+
+.navUser-item-cartLabel {
+	display: block;
+}
+
+/*
+## quick search results
+*/
+.quickSearchResults {
+	border: 1px solid stencilColor("color-greyLighter");
+	border-top: 0;
+}
+
+.quickSearchResults .productList .product {
+	padding: 0.75rem;
+	border-bottom: 1px solid stencilColor("color-greyLighter");
+}
+
+.quickSearchResults .productList .product:hover {
+	background-color: stencilColor("color-greyLightest");
+}
+
+.quickSearchResults .productList .product + .product,
+.quickSearchResults .productList {
+	margin: 0;
+}
+
+// quick search product results
+.quickSearchResults .listItem-details { padding-right: 0; }
+.quickSearchResults .listItem-figure { width: 90px; }
+.quickSearchResults .listItem-title { font-size: 15px; }
+.quickSearchResults .listItem-price { font-size: 1rem; }
+
+// quick search category results
+.quickSearchResults .suggestion-title { margin: 0.75rem; }
+.quickSearchResults .category-suggestion-list { margin: 0 0 1rem 0; }
+.quickSearchResults .category-suggestion { width: 100%; }
+
+/*
+## main navigation
+*/
+// when mobile menu is toggled open
+.navPages-container.is-open {
+	top: 90px;
+	padding-top: 0;
+	padding: 0 3rem;
+}
+
+// fancy main menu dropdowns on hover
+@include breakpoint("medium") {
+	.navPages {
+		position: relative;
+	}
+
+	.navPages-action--toplevel + .navPage-subMenu {
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		left: 0;
+		width: 100%;
+		transform-origin: 0 0;
+		transform: rotateX(-90deg);
+		transition: all 0.15s ease-in;
+	}
+
+	.navPages-item:hover .navPages-action--toplevel.has-subMenu + .navPage-subMenu {
+		display: block;
+		visibility: visible;
+		opacity: 1;
+		transform: rotateX(0deg);
+		transition: all 0.15s ease-in;
+	}
+}

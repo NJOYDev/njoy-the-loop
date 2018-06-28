@@ -1,0 +1,128 @@
+
+// press
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+
+$heading-font: "Avenir-Light";
+$heading-font-light: "Avenir-Light";
+$heading-font-dark: "Avenir-Roman";
+$heading-font-bold: "Avenir-Roman";
+
+.press {
+    text-align: center;
+    margin: 0 auto;
+    margin: 6rem 0;
+
+    @include breakpoint("large") {// 1140px and up
+        margin-top: 3rem;
+    }
+}
+
+.press-heading {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #333;
+    position: relative;
+    span {
+      font-weight: 400;
+    }
+
+    &:after {
+        content: '';
+        border-top: 1px solid #313131;
+        position: absolute;
+        top: 66px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 95%;
+        z-index: 0;
+    }
+}
+
+.press-img {
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding-bottom: 2rem;
+
+    @include breakpoint("medium") {// 801px and up
+        margin: 0;
+    }
+    img {
+      background-color: #FFF;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+.press-text {
+    text-align: center;
+    width:100%;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 5px;
+    color: #76787b;
+    display: block;
+
+    p {
+      width: 80%;
+      margin: 0 auto;
+      @include breakpoint("medium") {// 801px and up
+        width: 65%;
+      }
+    }
+
+}
+
+.press-slide {
+  padding-top: -20px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.press-slide .icon--quote-left svg {
+    position: absolute;
+    left: 0;
+    width: initial;
+    height: initial;
+    fill: $text-color-dark;
+}
+
+.press-slide .icon--quote-right svg {
+    position: absolute;
+    right: 0;
+    width: initial;
+    height: initial;
+    bottom: -10px;
+    fill: $text-color-dark;
+}
+// New Design
+
+.product-header-container {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: $text-color-dark;
+
+    .heading h1 {
+        text-transform: uppercase;
+        font-size: 35px;
+        letter-spacing: 15px;
+        font-weight: 600;
+    }
+    .subheading h2 {
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
+}

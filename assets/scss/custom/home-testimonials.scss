@@ -1,0 +1,122 @@
+
+// testimonials
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+
+$heading-font: "Avenir-Light";
+$heading-font-light: "Avenir-Light";
+$heading-font-dark: "Avenir-Roman";
+$heading-font-bold: "Avenir-Roman";
+
+.testimonials {
+    text-align: center;
+    margin: 0 auto;
+    margin: 8rem 0;
+}
+
+.testimonials-heading {
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #313131;
+    position: relative;
+    
+    span {
+        background-color: #ffffff;
+        padding: 0 10px;
+        z-index: 1;
+        position: relative;
+    }
+    
+    &:after {
+        content: '';
+        border-top: 1px solid #313131;
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 95%;
+        z-index: 0;
+    }
+}
+
+.testimonial-name {
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Avenir-Roman"
+}
+
+.testimonial-text {
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 5px;
+    width: 80%;
+    
+    @include breakpoint("medium") {// 801px and up
+        width: 60%;
+    }
+}
+
+.testimonial-slide {
+    position: relative;
+    
+}
+
+.testimonial-slide .icon--quote-left svg {
+    position: absolute;
+    fill: $text-color-dark;
+    width: 2rem;
+    height: 2rem;
+    left: 5px;
+    
+    @include breakpoint("medium") {// 801px and up
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    @include breakpoint("large") {// 1140px and up
+        width: initial;
+        height: initial;
+        left: 0;
+    }
+}
+.icon--quote-left,
+.icon--quote-right {
+    width: 8%;
+    position: absolute;
+}
+.icon--quote-left {
+    left: 5%;
+}
+.icon--quote-right {
+    right: 5%;
+    bottom: 100px;
+}
+
+.testimonial-slide .icon--quote-right svg {
+    position: absolute;
+    bottom: -0px;
+    fill: $text-color-dark;
+    width: 2rem;
+    height: 2rem;
+    right: 5px;
+    
+    @include breakpoint("medium") {// 801px and up
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    @include breakpoint("large") {// 1140px and up
+        width: initial;
+        height: initial;
+        right: 0;
+    }
+}

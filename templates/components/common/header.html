@@ -1,0 +1,78 @@
+{{#if banners.top}}
+	<div class="banners" data-banner-location="top">
+		<div class="banner">
+			{{{limit banners.top 1}}}
+		</div>
+	</div>
+{{/if}}
+<header class="header" role="banner">
+	<div class="header__main">
+		<div class="header__main-logo header-logo--center">
+			{{> components/common/store-logo}}
+		</div>
+		<div class="header-left--wrapper">
+			<div class="toggle-menu">
+				<a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+					<span class="mobileMenu-toggleIcon">Toggle menu</span>
+				</a>
+			</div>
+			<div class="navPages-container" id="menu" data-menu>
+				{{> components/common/navigation-menu}}
+			</div>
+			<div class="header__nav">
+				<div class="stores hide-on-mobile" id="scrollOnClick">
+					<a href="#" class="navPages-action">Products</a>
+				</div>
+				<div class="stores hide-on-mobile">
+					<a href="/store-locator/" class="navPages-action">Find A Store</a>
+				</div>
+				<div class="search hide-on-mobile">
+					<a href="#" class="search-action navPages-action" id="toggle-mobileSearch"  data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">
+						Search
+						<span class="icon icon--search">
+							<svg><use xlink:href="#icon-search-icon"></use></svg>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-mid-header hide-on-desktop">
+			<div class="hide-on-desktop">
+				<a class="cart-action" data-cart-preview data-dropdown="cart-preview-dropdown" data-options="align:right">
+				<span class="icon icon--cart">
+					<svg><use xlink:href="#icon-cart-icon"></use></svg>
+				</span>
+					<span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+				</a>
+			</div>
+		</div>
+		<div class="header-right--wrapper">
+			<div class="header__main-actions">
+				<div class="account-header">
+					<a href="/sales" class="navPages-action">SALES</a>
+				</div>
+				<div class="account-header">
+					{{#if customer}}
+					<a class="navPages-action" href="{{urls.account.index}}">Account</a>
+					{{else settings.account_creation_enabled}}
+					<a class="navPages-action" href="/login.php">Sign In</a>
+					{{/if}}
+				</div>
+				<div class="account-header">
+					<a class="cart-action hide-on-mobile" data-cart-preview data-dropdown="cart-preview-dropdown" data-options="align:right">
+				<span class="icon icon--cart">
+					<svg><use xlink:href="#icon-cart-icon"></use></svg>
+				</span>
+						<span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{{region name="header_bottom"}}}
+
+	<div class="dropdown dropdown--quickSearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+		{{> components/common/quick-search}}
+	</div>
+</header>

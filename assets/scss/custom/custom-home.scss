@@ -1,0 +1,1015 @@
+// text-colors
+$text-color-dark: #000;
+$text-color-light: #fff;
+$text-color-med: #A8A8A8;
+
+$med-highlight: #0FA693;
+
+// page gutters
+$desktop-gutter: 0 12rem;
+$mobile-gutter: 0 1rem;
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+
+$heading-font: "Avenir-Light";
+$heading-font-light: "Avenir-Light";
+$heading-font-dark: "Avenir-Light";
+$heading-font-bold: "Avenir-Roman";
+
+
+
+
+// heroCarousel
+
+.heroCarousel {
+    margin-bottom: 0;
+}
+
+.heroCarousel-content {
+    text-align: center;
+    padding: $mobile-gutter;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    width: 100%;
+
+    @include breakpoint("medium") {// 801px and up
+        background: transparent;
+        margin: $mobile-gutter;
+        margin: 0 auto;
+
+        @include breakpoint("large") {// 1140px and up
+            background: transparent;
+            margin: 0 auto;
+        }
+    }
+}
+
+.heroCarousel-title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $text-color-dark;
+    font-family: $heading-font-light;
+    font-weight: 500;
+
+    @include breakpoint("medium") {// 801px and up
+        padding-top: 50px;
+        color: $text-color-light;
+        font-size: 180px;
+        line-height: 230px;
+    }
+    @include breakpoint("large") {// 1140px and up
+        padding-top: 50px;
+        letter-spacing: 18px;
+        font-size: 220px;
+        line-height: 290px;
+    }
+    @include breakpoint(1400px) {
+        padding-top: 50px;
+        font-size: 270px;
+        line-height: 360px;
+    }
+}
+
+.heroCarousel-description {
+    color: $text-color-dark;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: $heading-font-light;
+
+    @include breakpoint("medium") {// 801px and up
+        color: $text-color-light;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    @include breakpoint("large") {// 1140px and up
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 5px;
+    }
+    @include breakpoint(1400px) {
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: 5px;
+    }
+}
+
+.heroCarousel-content .button--primary-dark {
+    width: 100%;
+    padding-top: 18px;
+
+    @include breakpoint("medium") {// 801px and up
+        width: auto;
+    }
+}
+
+.heroCarousel .slick-dots {
+    transform: rotateZ(90deg);
+    overflow: hidden;
+    right: 0;
+    width: auto;
+    bottom: 75%;
+
+
+    @include breakpoint("small") {// 501px and up
+        bottom: 65%;
+        right: 1rem;
+    }
+
+    @include breakpoint("medium") {// 801px and up
+        bottom: 50%;
+
+
+        @include breakpoint("large") {// 1140px and up
+           right: 12rem;
+        }
+    }
+}
+
+.heroCarousel .slick-dots li {
+    height: auto;
+    width: auto;
+    background-color: transparent;
+}
+
+.heroCarousel .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border: 1px solid $text-color-light;
+}
+
+
+.heroCarousel .slick-dots li button:before {
+    width: 8px;
+    height: 8px;
+    background: $text-color-light;
+
+}
+.heroCarousel .slick-dots .slick-active button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid $text-color-light;
+}
+
+.heroCarousel .slick-dots .slick-active button:before {
+    width: 10px;
+    height: 10px;
+    background: $text-color-light;
+}
+
+.heroCarousel-content .button--primary-dark {
+    font-family: $heading-font-light;
+
+   @include breakpoint ('medium') { // 801px and up
+        display: inline-block;
+        padding: 0.7rem 2.5rem;
+        background-color: #000;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
+
+// subscription
+
+.subscription-form {
+    background-color: $med-highlight;
+    padding: $mobile-gutter;
+    padding-top: 1.5rem;
+
+    @include breakpoint("medium") {// 801px and up
+        text-align: center;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+            padding-top: 1.5rem;
+        }
+    }
+}
+
+.newsletter-form--text {
+    color: $text-color-light;
+    font-family: $heading-font;
+    text-transform: uppercase;
+    width: 60%;
+    font-size: 16px;
+    padding-bottom: 1rem;
+
+    @include breakpoint("medium") {// 1140px and up
+        width: auto;
+        display: inline-block;
+        margin-right: 1rem;
+        font-size: 19px;
+    }
+}
+
+
+.subscription-form .form-input {
+    border: 1px solid $text-color-light;
+    color: $text-color-light;
+}
+
+.subscription-form .button {
+    width: auto;
+    margin-top: 0;
+}
+
+.subscription-form .form-prefixPostfix-button--postfix {
+    margin: 0;
+}
+
+.subscription-form .form {
+
+    @include breakpoint("medium") {// 1140px and up
+        display: inline-block;
+        width: 40%;
+        margin-left: 1rem;
+    }
+}
+
+.subscription-form .form-field {
+
+    @include breakpoint("medium") {// 1140px and up
+        margin: 0;
+    }
+}
+
+// cta cards
+
+.cta-cards {
+    margin-top: 4rem;
+    padding: $mobile-gutter;
+    margin-bottom: 4rem;
+    overflow: hidden;
+
+    @include breakpoint("medium") {// 801px and up
+        margin-bottom: 4rem;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+        }
+    }
+}
+
+.cta-cards .slick-dots {
+    bottom: -34px;
+
+    @include breakpoint("small") {// 501px and up
+        bottom: -34px;
+    }
+
+}
+
+.cta-slide--action {
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.cta-slide--text {
+    font-family: $heading-font-bold;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 20px;
+    color: $text-color-dark;
+}
+
+.cta-carousel .cta-slide {
+    margin: 0 1rem;
+
+    @include breakpoint("medium") {// 801px and up
+        margin: 0;
+        padding: 0 1rem;
+
+    }
+}
+
+.cta-cards .cta-slide img {
+
+    @include breakpoint("medium") {// 801px and up
+        max-height: 340px;
+    }
+}
+
+// cta articles
+
+.cta-articles {
+
+    @include breakpoint("medium") {// 801px and up
+        padding: $mobile-gutter;
+    }
+
+    @include breakpoint("large") {// 1140px and up
+        padding: $desktop-gutter;
+        overflow: hidden;
+    }
+}
+
+.cta-article {
+    position: relative;
+
+    @include breakpoint("medium") {// 801px and up
+        margin-bottom: 0;
+        margin-bottom: 4rem;
+    }
+
+}
+
+.cta-article--alt {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.cta-article--alt .cta-article--img {
+
+    @include breakpoint("medium") {// 801px and up
+        float: right;
+    }
+}
+
+.cta-article--layer {
+
+    @include breakpoint("medium") {// 801px and up
+        position: absolute;
+        width: 35%;
+        right:  0;
+        bottom: 0;
+    }
+
+}
+
+.cta-article--alt .cta-article--layer {
+
+    @include breakpoint("medium") {// 801px and up
+        bottom: -12rem;
+        width: 40%;
+        position: absolute;
+        left:  0;
+        bottom: 0;
+
+        @include breakpoint("large") {// 1140px and up
+            width: 35%;
+        }
+    }
+}
+
+
+.cta-article--card {
+    background-color: $text-color-light;
+    margin: 0 auto;
+
+    @include breakpoint("medium") {// 801px and up
+        width: auto;
+        margin: auto;
+    }
+}
+
+.cta-article .cta-text--inner {
+    padding: 3rem;
+    width: 100%;
+}
+
+.cta--card-heading {
+    font-family: $heading-font-bold;
+    text-transform: uppercase;
+    font-size: 25px;
+
+    @include breakpoint("medium") {// 801px and up
+        font-size: 28px;
+
+        @include breakpoint("large") {// 1140px and up
+            font-size: 32px;
+        }
+    }
+}
+
+.cta--card-action {
+    text-decoration: none;
+}
+
+.cta--card-button {
+    text-align: center;
+    font-size: 16px;
+
+    @include breakpoint("medium") {// 801px and up
+        width: 70%;
+    }
+
+    @include breakpoint("large") {// 1140px and up
+        width: 50%;
+    }
+}
+
+.cta--card-text {
+    margin-bottom: 1rem;
+}
+
+
+// product carousel
+
+.home-product-slider {
+    padding: $mobile-gutter;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: $desktop-gutter;
+        margin-top: 0;
+    }
+}
+
+.tab-content {
+    margin-top: 2rem;
+}
+
+.home-product-slider .tabs,
+.home-product-slider .tab.is-active {
+    border: none;
+}
+
+.home-product-slider .tabs {
+    float: none;
+
+    @media only screen and (min-width: 1059px) {
+        float: right;
+    }
+}
+
+.home-product-slider .tab {
+    float: left;
+    font-family: $heading-font-bold;
+    text-transform: uppercase;
+    border: none;
+    font-size: 24px;
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+    }
+}
+
+.home-product-slider .tab-title {
+    font-size: 20px;
+    padding: 0 1.5rem 0 0;
+
+    @include breakpoint("medium") {// 801px and up
+        font-size: 24px;
+
+        @include breakpoint("large") {// 1140px and up
+            font-size: 20px;
+            padding-top: 10px;
+        }
+    }
+
+}
+
+.product-carousel--title {
+    font-family: $heading-font-bold;
+    text-transform: uppercase;
+    font-size: 24px;
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+
+        @include breakpoint("large") {// 1140px and up
+            font-size: 33px;
+        }
+    }
+
+}
+
+.daily-product-carousel,
+.vaping-product-carousel,
+.battery-product-carousel {
+    text-align: center;
+}
+
+.daily-product-carousel .slick-list,
+.vaping-product-carousel .slick-list,
+.battery-product-carousel .slick-list {
+    width: 100%;
+}
+
+
+//faq
+
+.faq img {
+    width: 100%;
+}
+
+.faq-mobile {
+    display: block;
+
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+.faq-desktop {
+    display: none;
+
+    @include breakpoint("medium") {// 801px and up
+        display: block;
+    }
+}
+
+.faq-container {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.faq-heading {
+    font-family: $heading-font-bold;
+    text-transform: uppercase;
+    font-size: 20px;
+
+    @include breakpoint("medium") {// 801px and up
+        font-size: 23px;
+
+        @include breakpoint("large") {// 1140px and up
+            font-size: 32px;
+        }
+    }
+}
+
+.faq-subheading {
+    font-family: $heading-font-bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.faq-content {
+
+    display: inline-block;
+    width: 13%;
+    margin: 2rem 2rem;
+    vertical-align: top;
+
+}
+
+.faq-text {
+    padding: 1rem 0;
+}
+
+.faq-content--alt {
+    width: 60%;
+}
+
+.faq-content--alt-inner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    @include breakpoint("medium") {// 801px and up
+        width: 70%;
+    }
+}
+
+.faq-cta {
+    width: 30%;
+    text-align: center;
+}
+
+.faq-content a {
+    text-decoration: none;
+}
+
+// full width carousel
+
+.home-full-image {
+
+    @include breakpoint("medium") {// 801px and up
+        position: relative;
+    }
+}
+
+.home-full-image img {
+    width: 100%;
+}
+
+.home-content--inner {
+
+    @include breakpoint("large") {// 1140px and up
+        padding: $desktop-gutter;
+    }
+}
+
+.home-full-content {
+    padding: $mobile-gutter;
+    padding-top: 1rem;
+
+    @include breakpoint("medium") {// 801px and up
+        position: absolute;
+        top: 16%;
+        color: $text-color-light;
+        width: 10%;
+        padding-top: 0;
+
+        @include breakpoint("large") {// 1140px and up
+            width: 6%;
+            top: 25%;
+
+        }
+    }
+}
+
+.home-full-top-heading,
+.home-full-heading,
+.home-full-cta {
+    font-family: $heading-font;
+    text-transform: uppercase;
+}
+
+.home-full-top-heading {
+    font-size: 14px;
+    margin-bottom: 1rem;
+
+    @include breakpoint("medium") {// 801px and up
+        font-size: 18px;
+    }
+}
+
+.home-full-heading {
+    margin-bottom: 1rem;
+    font-size: 20px;
+
+    @include breakpoint("medium") {// 801px and up
+        font-size: 23px;
+
+        @include breakpoint("large") {// 1140px and up
+            font-size: 32px;
+        }
+    }
+}
+
+.home-full-text {
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.home-full-content .button--primary-light {
+    background-color: transparent;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    border: 2px solid $text-color-dark;
+    color: $text-color-dark;
+
+    @include breakpoint("medium") {// 801px and up
+        color: $text-color-light;
+        border: 2px solid $text-color-light;
+        width: 40%;
+    }
+    &:hover {
+        color: $text-color-dark;
+    }
+}
+
+.home-full--action {
+    text-decoration: none;
+}
+
+// partners
+
+.partners-inner {
+    padding: $mobile-gutter;
+    overflow: hidden;
+    width: 100%;
+    margin: 5rem 0 0 0;
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-flex;
+        justify-content: space-around;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+            padding-top: 2rem;
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+
+.partners-inner {
+    display: block;
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+
+    }
+}
+
+.partners-item {
+    display: inline-block;
+    list-style-type: none;
+    width: 30%;
+
+    @include breakpoint("large") {// 1140px and up
+        width: 15%;
+        text-align: center;
+    }
+}
+
+.partners-item img {
+    max-height: 100px;
+}
+
+.partners-action {
+    text-decoration: none;
+}
+
+.partners-cta {
+    display: block;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+// home page new styles
+
+.products-heading {
+    padding-top: 3rem;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 400;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.products__subheading {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+.productsGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    @include breakpoint("medium") {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: left;
+        flex-wrap: wrap;
+    }
+}
+
+.product-card {
+    position: relative;
+    max-width:270px;
+    margin: 0 3em !important;
+    .product-options {
+        width: 40%;
+        position: absolute;
+        right: 50px;
+        top: 0;
+        padding-left: 10px;
+        .title {
+            margin-top: 70px;
+            width: 250px !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            text-align: left;
+            .big {
+              font-size: 14px;
+              margin-left: 1px;
+              font-weight: bolder ;
+            }
+        }
+        .price {
+            text-align: left;
+            margin: 20px 2px;
+            font-weight: bolder;
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+        .qty-form {
+            display: none;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            .increment, .decrement {
+                height: 20px;
+                width: 20px;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+            .form-input {
+              margin-top: -10px;
+              width: 20px;
+            }
+        }
+    }
+    .home-image {
+        position: relative;
+        right: 100px;
+        height: 250px;
+        width: 250px;
+        z-index: 160;
+    }
+    .add-to-cart {
+        position: absolute;
+        left: -15px;
+        top: 180px;
+        .add-to-cart-button {
+            z-index: 1;
+            border: 0;
+            text-align: center;
+            height: 25px;
+            width: 175px;
+            margin-top: 10%;
+            color: #FFFFFF;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 15px;
+            padding-top: 6px;
+            padding-bottom: 4px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 540px) {
+    .productsGrid {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: left;
+        flex-wrap: wrap;
+    }
+    .product-card {
+        position: relative;
+        max-width: 250px;
+        margin: 0 2em !important;
+    }
+}
+
+.prefilled {
+    .add-to-cart {
+        top: 170px;
+    }
+}
+
+.blueberry {
+    .add-to-cart {
+      left: -45px;
+    }
+}
+
+$tobacco : darkgoldenrod;
+$menthol : darkgreen;
+$blueberry: #152549;
+$apple-mellon: darken(lightgreen, 30);
+$tropical: lighten(darkgreen, 10);
+$watermelon: red;
+$black : #000;
+
+.extra {
+    color: darkred;
+}
+
+.tobacco-text {
+    color: $tobacco;
+}
+
+.tobacco-button {
+    background-color: $tobacco;
+    paddin-top: 50%
+}
+
+.tobacco-border {
+    border-radius: 50%;
+    border: 1px solid $tobacco !important;
+}
+
+.menthol-text {
+    color: $menthol;
+}
+
+.menthol-button {
+    background-color: $menthol;
+}
+
+.menthol-border {
+    border-radius: 50%;
+    border: 1px solid $menthol !important;
+}
+
+
+.blueberry-text {
+    color: $blueberry;
+}
+
+.blueberry-button {
+    background-color: $blueberry;
+}
+
+.blueberry-border {
+    border-radius: 50%;
+    border: 1px solid $blueberry !important;
+}
+
+
+.apple-mellon-text {
+    color: $apple-mellon;
+}
+
+.apple-mellon-button {
+    background-color: $apple-mellon;
+}
+
+.apple-mellon-border {
+    border-radius: 50%;
+    border: 1px solid $apple-mellon !important;
+}
+
+.tropical-text {
+    color: $tropical;
+}
+
+.tropical-button {
+    background-color: $tropical;
+}
+
+.tropical-border {
+    border-radius: 50%;
+    border: 1px solid $tropical !important;
+}
+
+.watermelon-text {
+    color: $watermelon;
+}
+
+.watermelon-button {
+    background-color: $watermelon;
+}
+
+.watermelon-border {
+    border-radius: 50%;
+    border: 1px solid $watermelon !important;
+}
+
+.black-text {
+    color: $black;
+    font-weight: bolder;
+}
+
+.black-button {
+    background-color: $black;
+}
+
+.black-border {
+    border-radius: 50%;
+    border: 1px solid $black !important;
+}
+
+
+// Nav
+
+.hide-on-mobile {
+  @include breakpoint("medium") {
+    display: inline-block !important;
+  }
+  display: none !important ;
+}
+
+.hide-on-desktop {
+  @include breakpoint("medium") {
+    display: none !important ;
+  }
+  display: inline-block !important;
+}
+
+
+.mobile-mid-header .cart-action{
+    position: absolute;
+    right: 5rem;
+    display: inline-block;
+    margin-top: 2px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+	<head>
+		<title>{{ head.title }}</title>
+		{{#if page_type '===' '404'}}
+			<meta name="robots" content="noindex,follow">
+		{{/if}}
+		{{{ head.meta_tags }}}
+		{{{ head.config }}}
+		{{#block "head"}} {{/block}}
+		<link href="{{ head.favicon }}" rel="shortcut icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		{{{stylesheet '/assets/css/theme.css'}}}
+		{{ getFontsCollection }}
+		<script src="{{cdn 'assets/modernizr-custom.js'}}"></script>
+
+		{{{head.scripts}}}
+		{{{head.rsslinks}}}
+
+		{{inject 'themeSettings' theme_settings}}
+		{{inject 'genericError' (lang 'common.generic_error')}}
+		{{inject 'maintenanceMode' settings.maintenance}}
+		{{inject 'urls' urls}}
+		{{{snippet 'htmlhead'}}}
+		<style type="text/css" media="screen, print">
+			@font-face {
+				font-family: "Avenir-Roman";
+				src: url("{{cdn 'webdav:/fonts/AvenirFree/AvenirLTStd-Roman.otf'}}");
+			}
+			@font-face {
+				font-family: "Avenir-Light";
+				src: url("{{cdn 'webdav:/fonts/AvenirFree/AvenirLTStd-Light.otf'}}");
+			}
+			@font-face {
+				font-family: "Avenir-Book";
+				src: url("{{cdn 'webdav:/fonts/AvenirFree/AvenirLTStd-Book.otf'}}");
+			}
+			@font-face {
+				font-family: "Trade-Gothic";
+				src: url("{{cdn 'webdav:/fonts/TradeGothic/Trade-Gothic-LT-Bold-Condensed-No20.ttf'}}");
+			}
+	 </style>
+
+	 <script>
+		 // remove Zero Width Space above header
+			const nodes = Array.from(document.body.childNodes);
+			nodes.forEach(el => {
+				if (el.textContent.charCodeAt(0) === 8203) {
+					el.remove();
+				}
+			});
+	 </script>
+
+	</head>
+	<body class="page--{{page_type}}">
+	    <!-- NJOY Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W67PXC"height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		{{{snippet 'header'}}}
+
+		{{#if settings.privacy_cookie}}
+			{{> components/common/cookie}}
+		{{/if}}
+
+		{{#if page_type '!==' 'default'}}
+		{{> components/common/header}}
+		{{/if}}
+		{{> components/common/body }}
+		{{> components/common/footer }}
+		<div class="body__sidebar">
+			<div class="body__sidebar--container">
+				{{> components/common/cart-preview }}
+			</div>
+			<div class="button--primary-dark cart--close-btn">
+				Close
+			</div>
+		</div>
+
+		<script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+		<script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+
+		<script>
+			// Exported in app.js
+			window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+		</script>
+
+		<div class="icons-svg-sprite">{{> components/common/icons/icon-defs }}</div>
+
+		{{{footer.scripts}}}
+		{{{snippet 'footer'}}}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+		<script>
+		// Smooth Scroll @deepak
+        $("#scrollOnClick").click(function() {
+            if($('body').find("#productsView").length !== 0) {
+                $('html, body').animate({
+                    scrollTop: $("#productsView").offset().top-120
+                }, 1500);
+            } else {
+                window.location.href="/";
+            }
+
+        });
+		// End - smooth scroll
+        window._getCookie = function (name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+        }
+
+        setTimeout(function(){
+            if (_getCookie('passedAgeGate')) {
+                window.wasAddedToAdRoll = true
+            }
+
+            function waitForEl(selector, callback) {
+              var poller = setInterval(function() {
+                $jObject = jQuery(selector);
+                if ($jObject.length < 1) {
+                  return;
+                }
+                clearInterval(poller);
+                callback($jObject);
+              }, 500);
+            }
+
+            waitForEl(".swal2-confirm", function() {
+              $('.swal2-cancel').on('click', function(){
+                try {
+                   __adroll.record_user({"adroll_segments": "9f00802e"});
+                } catch(err) {}
+              });
+            });
+        }, 1000);
+
+        </script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{#partial "page"}}
+
+    {{#each product.shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+
+    <div itemscope itemtype="http://schema.org/Product">
+        {{> components/products/product-view schema=true}}
+
+        <div class="related-products--wrapper">
+            {{#if product.related_products}}
+                <h2 class="page-heading related_products">Other Products You May Like</h2>
+               {{> components/products/carousel products=product.related_products columns=4}}
+            {{/if}}
+        </div>
+        <div class="product-article">
+            {{> components/products/product-banner}}
+        </div>
+
+    </div>
+
+{{/partial}}
+{{> layout/base}}

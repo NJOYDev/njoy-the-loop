@@ -1,0 +1,22 @@
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<main class="page">
+    <section class="page-content page-content--centered">
+        <h1 class="page-heading">{{lang 'page_not_found.page_heading'}}</h1>
+        <p class="u-textAlignCenter">
+            {{lang 'page_not_found.message'}}
+            Click <a href="/">Here</a> to go back to the home page, or check out our other pages below!
+        </p>
+
+        {{> components/common/search-box}}
+
+        <div class="cta-cards cta-cards--404page">
+            {{> components/common/cta-home-carousel}}
+        </div>
+    </section>
+</main>
+
+{{/partial}}
+{{> layout/base}}

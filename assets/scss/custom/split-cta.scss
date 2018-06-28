@@ -1,0 +1,45 @@
+.cta-section {
+    text-align: center;
+    margin: 0 0 5rem;
+    font-size: 0;
+}
+
+.home-cta-heading {
+    margin-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.home-cta-text {
+    color: #76787b;
+    width: 80%;
+    margin: 2rem auto;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 5px;
+    min-height: 180px;
+    vertical-align: middle;
+    max-width: 550px;
+}
+
+.home-cta-button {
+  text-decoration: none;
+  color: #FFF;
+
+  &:hover {
+    color: #FFF;
+  }
+}
+
+
+.home-cta {
+    display: inline-block;
+
+    @include breakpoint(1000px) {
+        width: 50%;
+        vertical-align: top;
+    }
+}

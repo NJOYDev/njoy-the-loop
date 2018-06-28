@@ -1,0 +1,314 @@
+// text-colors
+$text-color-dark: #000;
+$text-color-darker: #202020;
+$text-color-light: #fff;
+$text-color-med: #A8A8A8;
+
+// page gutters
+$desktop-gutter: 0 12rem;
+$mobile-gutter: 0 1rem;
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+$heading-font: "Avenir-Light";
+$heading-font-dark: "Avenir-Light";
+$heading-font-bold: "Avenir-Light";
+
+// body
+
+.body {
+    margin-bottom: 0;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+.page {
+    margin: 0;
+}
+
+.page-content.page-content--centered {
+    padding: $mobile-gutter;
+
+    @include breakpoint("medium") {// 801px and up
+        padding: 0;
+    }
+}
+
+.page-heading {
+    margin-top: 4rem;
+
+    @include breakpoint("medium") {// 801px and up
+        margin-top: 0;
+    }
+}
+
+.category__heading {
+    margin-top: 0;
+
+    @include breakpoint("medium") {// 801px and up
+        line-height: 5rem;
+    }
+}
+
+.search-page {
+    padding: $mobile-gutter;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: $desktop-gutter;
+    }
+}
+
+// button resets
+
+.button--primary {
+    border: 2px solid $text-color-dark;
+    color: $text-color-dark;
+    background-color: $text-color-light;
+    border-radius: 0;
+    font-family: $heading-font;
+    text-transform: uppercase;
+    padding: 1rem 1.2rem;
+
+    &:hover {
+        background-color: $text-color-dark;
+        border: 2px solid $text-color-dark;
+    }
+}
+
+.button--primary-dark {
+    border: 2px solid $text-color-dark;
+    color: $text-color-dark;
+    background-color: $text-color-light;
+    border-radius: 0;
+    font-family: $heading-font;
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+}
+
+.button--primary-light {
+    border: 2px solid $text-color-light;
+    color: $text-color-dark;
+    background-color: $text-color-light;
+    border-radius: 0;
+    font-family: $heading-font;
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $text-color-light;
+        border: 2px solid $text-color-light;
+    }
+}
+
+.button--primary--alt {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: $text-color-dark;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 2px solid $text-color-dark;
+
+    &:hover {
+      border: 2px solid $text-color-med;
+    }
+}
+
+.container {
+    padding: 0;
+    max-width: none;
+    padding-top: 5rem;
+}
+
+.page--default {
+    .container {
+        padding-top: 0 !important;
+    }
+}
+
+
+
+// product-card styles
+
+.card {
+    background-color: $text-color-light;
+    text-align: center;
+}
+
+.product-card {
+    margin: 0 1rem;
+    padding-bottom: 2rem;
+}
+
+.product-card .card-title {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    color: $text-color-dark;
+    font-weight: bold;
+}
+
+.product-card a {
+    text-decoration: none;
+}
+
+.product-card .card-text {
+    margin-bottom: 1rem;
+}
+
+.product-card .card-cta--buy {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.product-card .preloadImage {
+    display: none;
+}
+
+
+
+
+//slick
+
+.slick-dots li button,
+.slick-dots li button, .slick-dots li button::before {
+    height: 8px;
+    width: 8px;
+}
+
+.slick-dots .slick-active button,
+.slick-dots .slick-active button, .slick-dots .slick-active button::before {
+    height: 12px;
+    width: 12px;
+}
+
+.slick-next, .slick-prev {
+    background-color: transparent;
+    border: none;
+}
+
+.slick-next:hover, .slick-next:focus, .slick-prev:hover, .slick-prev:focus {
+    background-color: transparent;
+}
+
+//focus
+
+*:focus {
+    outline: none;
+}
+
+.slick-prev {
+    &::before {
+        background-image: url("../icons/long-arrow-left.svg");
+    }
+}
+
+.slick-next {
+    &::before {
+        background-image: url("../icons/long-arrow-right.svg");
+    }
+}
+
+// form resets
+
+
+.form-input {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+
+
+.form-input::placeholder {
+    color: $text-color-light;
+}
+
+.form-label small {
+    margin-left: 1rem;
+}
+
+.form-select {
+    border-radius: 0;
+}
+
+// cart page resets
+
+.cart-page {
+    padding: $mobile-gutter;
+
+    @include breakpoint("large") {// 1140px and up
+       padding: $desktop-gutter;
+    }
+}
+
+.cart-page .form-increment .button {
+    border: none;
+}
+
+.cart--close-btn {
+    margin: 0 4rem 4rem 4rem;
+    text-align: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.checkout--button {
+    width: 100%;
+
+    @include breakpoint("small") {// 501px and up
+        width: 30%;
+    }
+}
+
+.cart-actions {
+    margin-bottom: 2rem;
+}
+
+// account page resets
+
+.login-account {
+    text-align: center;
+}
+
+.account-body {
+    padding: $mobile-gutter;
+    margin: 0;
+
+    @include breakpoint("large") {// 1140px and up
+        padding: $desktop-gutter;
+    }
+}
+
+.resetPassword-alert {
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+// age gate modal pop-up
+
+.swal2-title {
+    font-size: 20px !important;
+    font-family: $heading-font;
+}
+
+.swal2-content {
+    font-size: 13px !important;
+}
+
+.swal2-buttonswrapper {
+    justify-content: space-around;
+
+}
+
+.age-gate-button--under,
+.age-gate-button--over {
+
+    @include breakpoint("medium") {// 801px and up
+        width: 100%;
+    }
+}

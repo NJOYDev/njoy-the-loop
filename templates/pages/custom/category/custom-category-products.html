@@ -1,0 +1,47 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}}
+        <link rel="prev" href="{{pagination.category.previous}}">
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+
+{{#if category.description}}
+    <div class="category-landing__heading">
+        {{{category.description}}}
+    </div>
+{{/if}}
+<div class="category__subcatgories">
+    {{#each categories}}
+        {{#if name '==' 'Products'}}
+            {{#each children}}
+                <div class="subcategories__container" style="background-image: url({{getImage image 'gallery_size' (cdn theme_settings.default_image_category)}}); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="subcategories__heading">{{name}}</h2>
+                    <ul class="subcategories__list">
+                        {{#each children}}
+                            <a href="{{url}}" class="subcategories__link">
+                                <li class="subcategories__list-item">
+                                    <img src="{{getImage image 'gallery_size' (cdn theme_settings.default_image_category)}}" alt="{{name}}" class="subcategories__image">
+                                    <h3 class="subcategories__list-item-name">{{name}}</h3>
+                                </li>
+                            </a>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/each}}
+        {{/if}}
+    {{/each}}
+</div>
+
+{{/partial}}
+{{> layout/base}}

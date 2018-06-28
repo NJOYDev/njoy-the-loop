@@ -1,0 +1,12 @@
+{{{ snippet "forms_search"}}}
+<form class="form search_wrap"  action="{{urls.search}}">
+    <fieldset class="form-fieldset">
+        <div class="form-field">
+            <label class="form-label is-srOnly" for="search_query_adv">{{lang 'search.results.form_label'}}</label>
+            <div class="form-prefixPostfix">
+               <input class="form-input" id="search_query_desktop" name="search_query_adv" value="{{forms.search.query}}" placeholder="search NJOY">
+                <button class="search"><span class="icon icon-search-icon"><svg><use xlink:href="#icon-search" /></svg></span></button>
+            </div>
+        </div>
+    </fieldset>
+</form>

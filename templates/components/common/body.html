@@ -1,0 +1,25 @@
+{{#or
+(if page_type '===' 'default')
+}}
+<div class="body">
+    {{> components/common/header}}
+    {{#block "hero"}} {{/block}}
+    {{else}}
+    <div class="body body-alt">
+        {{/or}}
+        {{#or
+        (if page_type '===' 'default')
+        (if page_type '===' 'category')
+        (if page_type '===' 'product')
+        (if page_type '===' 'page')
+        }}
+        <div class="container" id="container-alt">
+            {{else}}
+            <div class="container" id="container">
+                {{/or}}
+                {{#block "page"}} {{/block}}
+            </div>
+            {{> components/common/modal}}
+        </div>
+    </div>
+</div>

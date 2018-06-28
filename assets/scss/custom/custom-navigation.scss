@@ -1,0 +1,504 @@
+// text-colors
+$text-color-dark: #000;
+$text-color-light: #fff;
+$text-color-med: #A8A8A8;
+$text-color-darker: #515151;
+
+$med-light: #F7F7F9;
+
+// page gutters
+$desktop-gutter: 0 12rem;
+$mobile-gutter: 0 1rem;
+
+// font family
+$body-font: "Avenir-Light";
+$body-font-bold: "Avenir-Light";
+
+$heading-font: "Avenir-Light";
+$heading-font-dark: "Avenir-Light";
+$heading-font-bold: "Avenir-Light";
+
+$nav-font: "Trade-Gothic";
+
+.header {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    margin: 0;
+
+    @include breakpoint("medium") {
+        position: fixed;
+        z-index: 9999;
+    }
+}
+
+
+.navPages-action {
+    font-family: $nav-font;
+    color: $text-color-darker;
+    font-size: 15px;
+
+    @include breakpoint("medium") {// 801px and up
+      font-size: 21px;
+    }
+}
+
+.navPages-action:hover {
+    color: $text-color-med;
+}
+
+
+.navPage-subMenu .navPages-action {
+    text-transform: uppercase;
+
+    @include breakpoint("medium") {// 801px and up
+        padding: 0;
+        font-size: 15px;
+
+        @include breakpoint("large") {// 1140px and up
+            font-size: 18px;
+        }
+    }
+}
+
+.navPages {
+    padding: 0;
+    height: 60%;
+    @include breakpoint("medium") {// 1140px and up
+        position: static;
+    }
+}
+
+
+.navPages-list.js-target > .navPages-item {
+    padding: 1rem 0;
+    width: 30%;
+    text-align: center;
+
+    @include breakpoint("medium") {// 801px and up
+        padding: 0;
+        width: auto;
+        text-align: auto;
+    }
+}
+
+.navPages-list.js-target {
+    background-color: $text-color-med;
+
+    @include breakpoint("medium") {// 801px and up
+        background-color: none;
+    }
+}
+
+.navPages-list.js-target .navPages-action--toplevel {
+    color: $text-color-light;
+
+    @include breakpoint("medium") {// 801px and up
+        color: $text-color-light;
+    }
+}
+
+.navPages-list.js-target .navPages-action--toplevel.is-open{
+    color: $text-color-light;
+    background-color: $text-color-dark;
+    text-decoration: underline;
+}
+
+.navPages-list--user > .navPages-item {
+
+
+    @include breakpoint("medium") {// 801px and up
+        padding: 0;
+        width: auto;
+        text-align: auto;
+    }
+}
+
+.navPages-list.js-target > .navPages-item:nth-child(2),
+.navPages-list--user > .navPages-item:nth-child(2) {
+    border-left: 1px solid $text-color-med;
+    border-right: 1px solid $text-color-med;
+
+    @include breakpoint("medium") {// 801px and up
+        border: none;
+    }
+}
+
+.navPage-subMenu, .navPages-action.is-open {
+    color: $text-color-med;
+
+    @include breakpoint("medium") {// 801px and up
+        color: $text-color-dark;
+    }
+}
+
+.navPages-list .icon {
+    display: inline-block;
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+    }
+}
+
+.navPages-list--user {
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+.navPages-list--user .navPages-action {
+    font-size: 15px;
+    padding: 1rem 20px;
+}
+
+.navPage-subMenu,
+.navPages-action.is-open {
+    background-color: $text-color-light;
+}
+
+.navPage-subMenu {
+
+
+    @include breakpoint("medium") {// 801px and up
+        min-height: 300px;
+        padding: 0;
+    }
+
+    @include breakpoint("large") {// 1140px and up
+        min-height: 380px;
+    }
+}
+
+.navPages-container {
+
+    @include breakpoint("medium") {// 801px and up
+        position: static;
+    }
+}
+
+.navPages-action--toplevel + .navPage-subMenu {
+
+
+    @include breakpoint("medium") {// 801px and up
+        top: 5rem;
+        border-top: 1px solid $text-color-med;
+
+        @include breakpoint("large") {// 1140px and up
+            top: 7rem;
+        }
+    }
+}
+
+.navPages .navPage-subMenu-list {
+    max-width: none;
+
+}
+
+.navPage-subMenu .navPage-subMenu-list{
+    padding: 1rem;
+
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+        width: 65%;
+        padding: $mobile-gutter;
+        padding-top: 2rem;
+        position: relative;
+
+        @include breakpoint("large") {// 1140px and up
+            padding: $desktop-gutter;
+            padding-top: 2rem;
+        }
+    }
+}
+
+.vape-life-menu .navPage-subMenu-item > .navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        opacity: 0;
+    }
+}
+
+.vape-life-menu .navPage-subMenu-item.active > .navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        opacity: 1;
+    }
+}
+
+.navPage-subMenu-item .navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+.navPage-subMenu-item.active > .navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        display: block;
+    }
+}
+
+.vape-life-menu .navPage-subMenu-list {
+
+
+    @include breakpoint("medium") {// 801px and up
+        display: flex;
+        width: 100%;
+    }
+}
+
+.vape-life-menu .navPage-subMenu-item {
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline;
+    }
+}
+
+.vape-life-menu .navPage-childList .navPage-childList-item {
+
+    @include breakpoint("medium") {// 801px and up
+        display: inline-block;
+        width: 50%;
+        margin-right: 6rem;
+    }
+}
+
+.navPage-subMenu-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid $text-color-med;
+
+    @include breakpoint("medium") {// 801px and up
+        width: auto;
+        border-bottom: none;
+        padding-right: 2rem !important;
+
+
+        @media only screen and (min-width: 1350px) {
+            padding-right: 3rem;
+        }
+    }
+
+}
+
+.vape-life-menu .navPage-subMenu-action {
+
+    @include breakpoint("medium") {// 801px and up
+        font-size: 13px;
+    }
+
+    @media only screen and (min-width: 1260px) {
+        font-size: 14px;
+    }
+
+    @media only screen and (min-width: 1300px) {
+        font-size: 16px;
+    }
+
+}
+
+.navPage-subMenu-item > .navPage-subMenu-action {
+    border-bottom: none;
+    width: auto;
+}
+
+
+.navPage-subMenu--text {
+    display: inline-block;
+    font-size: 13px;
+    color: $text-color-dark;
+    padding: $mobile-gutter;
+    width: 90%;
+    margin-bottom: 2rem;
+
+    @include breakpoint("medium") {// 801px and up
+        min-height: 300px;
+        border-left: 1px solid $text-color-med;
+        width: 35%;
+        background-color: $med-light;
+        vertical-align: top;
+        margin-bottom: 0;
+
+        @include breakpoint("large") {// 1140px and up
+            min-height: 380px;
+        }
+    }
+}
+
+.navPage-subMenu-item.active > .navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        opacity: 1;
+        min-width: 250px;
+
+        @include breakpoint("large") {// 1140px and up
+            min-width: 400px;
+            left: 12rem;
+        }
+    }
+
+}
+
+
+
+.navPage-subMenu--text-inner {
+
+    @include breakpoint("medium") {// 801px and up
+        padding: 2rem 1rem;
+        width: 90%;
+
+        @include breakpoint("large") {// 1140px and up
+            width: 80%;
+            padding: 2rem 4rem;
+        }
+    }
+}
+
+.navPages-subMenu--cta {
+    display: inline-block;
+    font-family: $heading-font-bold;
+    text-transform: uppercase;
+    font-size: 16px;
+
+    @include breakpoint("medium") {// 801px and up
+        display: block;
+    }
+}
+
+.navPage-childList-item {
+
+    @include breakpoint("medium") {// 801px and up
+        border-bottom: 1px solid $text-color-med;
+        width: 100%;
+
+        @include breakpoint("large") {// 1140px and up
+            width: 55%;
+        }
+    }
+}
+
+.navPages-item:hover .navPages-action-moreIcon {
+    transform: scale(1,-1);
+}
+
+
+.navPages-action-moreIcon {
+    height: 1rem;
+    width: 1rem;
+    float: right;
+    margin-top: 8px;
+
+    @include breakpoint("medium") {// 801px and up
+        float: none;
+        margin-top: 0;
+    }
+}
+
+.navPage-subMenu-list .navPage-subMenu-item .navPages-action-moreIcon  {
+    display: inline-block;
+
+    @include breakpoint("medium") {// 801px and up
+        display: none;
+    }
+}
+
+li.navPage-subMenu-item.active:hover .navPage-subMenu-action {
+
+    @include breakpoint("medium") {// 801px and up
+        border-bottom: 2px solid #000;
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.navPage-subMenu-item .navPage-subMenu-action:first-child{
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+        @include breakpoint("medium") {// 801px and up
+            color: #000;
+            border-bottom: 2px solid #000;
+        }
+    }
+}
+
+
+.navPage-childList.is-open {
+     display: block;
+
+    @include breakpoint("medium") {// 801px and up
+        opacity: 0;
+
+    }
+}
+
+.navPage-childList {
+    display: none;
+
+    @include breakpoint("medium") {// 801px and up
+        opacity: 0;
+    }
+}
+
+.navPage-subMenu-item:hover:first-child > .navPage-childList.is-open {
+
+
+    @include breakpoint("medium") {// 801px and up
+        opacity: 1;
+        transition: opacity 0.8s;
+    }
+}
+
+.navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        position: absolute;
+        // left: 1rem;
+
+        @include breakpoint("large") {// 1140px and up
+            // left: 12rem;
+        }
+    }
+}
+
+.navPage-subMenu-item:hover:not(:first-child) > .navPage-childList {
+
+    @include breakpoint("medium") {// 801px and up
+        left: 1rem;
+        opacity: 1;
+
+        transition: opacity 0.8s;
+        @include breakpoint("large") {// 1140px and up
+            left: 12rem;
+
+        }
+    }
+}
+
+.navPage-child--img {
+    border-radius: 50%;
+    margin: 1rem 1rem 1rem 0;
+    max-width: 45px;
+
+    @include breakpoint("medium") {// 801px and up
+        max-width: 37px;
+
+        @include breakpoint("large") {// 1140px and up
+            max-width: 45px;
+
+        }
+    }
+}
+
+#vaping-advocacy li {
+    width: 40%;
+}
+
+// Sales menu
+
+.sales {
+
+    @include breakpoint("small") {
+        display: none;
+    }
+}

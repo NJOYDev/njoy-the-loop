@@ -1,0 +1,538 @@
+---
+categories:
+  description: true
+category:
+  shop_by_price: true
+  products:
+    limit: {{theme_settings.categorypage_products_per_page}}
+products:
+  new:
+    limit: {{theme_settings.homepage_new_products_count}}
+  featured:
+    #limit: {{theme_settings.homepage_featured_products_count}}
+    limit: 50
+  top_sellers:
+    limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+  recent_posts:
+    limit: {{theme_settings.homepage_blog_posts_count}}
+product:
+  images:
+    limit: 5
+---
+{{#partial "hero"}}
+    {{#if carousel}}
+        {{> components/carousel}}
+    {{/if}}
+    {{{snippet 'home_content'}}}
+{{/partial}}
+
+{{#partial "page"}}
+
+    {{#each shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+<div id="productsView">
+<div class="main full">
+        <div class="product-header-container">
+            <h2 class="products-heading"><span>THE NJOY DAILY</span></h2>
+            <div class="products__subheading">A Disposable e-cig equivalent to a pack of cigarettes</div>
+            <div class="">
+                <div class="row productsGrid">
+                    <!-- 1. Daily Rich Tobacco-->
+                    <div class="product-card">
+                        <a href="/njoy-daily-rich-tobacco/">
+                                <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/130/729/rich__33641.1527557127.png?c=2&imbypass=on" alt="the daily rich tobacco">
+                                <div class="product-options">
+                                    <div class="title">
+                                        The Daily<br>
+                                        <span class="big tobacco-text">Rich Tobacco</span>
+                                    </div>
+                                    <div class="price">
+                                        <span class="tobacco-text">$5.99</span>
+                                    </div>
+                                    <div class="qty-form">
+                                        <span class="decrement tobacco-text tobacco-border inc-bttn">-</span>
+                                        <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                        <span class="increment tobacco-text tobacco-border inc-bttn">+</span>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <div class="add-to-cart-button tobacco-button">Buy Now</div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+                    <!-- 2. Daily Classic Tobacco -->
+                    <div class="product-card">
+                        <a href="/njoy-daily-classic-tobacco/">
+                            <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/131/736/cl-tob__50698.1527602570.png?c=2&imbypass=on" alt="daily classic tobacco" style="right: 80px;">
+                            <div class="product-options">
+                                <div class="title">
+                                    The daily<br>
+                                    <span class="big tobacco-text">Classic Tobacco</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tobacco-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tobacco-text tobacco-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment tobacco-text tobacco-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button tobacco-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                     <!-- 3. Daily Blue+Blackberry -->
+                    <div class="product-card">
+                        <a href="njoy-daily-blue-black-berry/">
+                            <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/132/732/BLUE_1__83785.1527557219.png?c=2&imbypass=on" alt="blue and blackberry" style="right: 90px;">
+                            <div class="product-options">
+                                <div class="title">
+                                    The Daily<br>
+                                    <span class="big blueberry-text">Blue + Blackberry</span>
+                                </div>
+                                <div class="price">
+                                    <span class="blueberry-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement blueberry-text blueberry-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment blueberry-text blueberry-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button blueberry-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 4. Daily Cool Menthol -->
+                    <div class="product-card">
+                            <a href="/njoy-daily-cool-menthol">
+                                <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/129/728/menth_1__04736.1527557067.png?c=2&imbypass=on" alt="daily cool menthol">
+                                <div class="product-options">
+                                    <div class="title">
+                                        The Daily<br>
+                                        <span class="big menthol-text">Cool Menthol</span>
+                                    </div>
+                                    <div class="price">
+                                        <span class="menthol-text">$5.99</span>
+                                    </div>
+                                    <div class="qty-form">
+                                        <span class="decrement menthol-text menthol-border inc-bttn">-</span>
+                                        <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                        <span class="increment menthol-text menthol-border inc-bttn">+</span>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <div class="add-to-cart-button menthol-button">Buy Now</div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+                    <!-- 5. Daily Apple Melon -->
+                    <div class="product-card">
+                        <a href="/njoy-daily-apple-melon">
+                            <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/136/734/APPLEMELLON_1__69629.1527557354.png?c=2&imbypass=on" alt="daily apple melon">
+                            <div class="product-options">
+                                <div class="title">
+                                    The Daily<br>
+                                    <span class="big apple-mellon-text">Apple Melon</span>
+                                </div>
+                                <div class="price">
+                                    <span class="apple-mellon-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement apple-mellon-text apple-mellon-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment apple-mellon-text apple-mellon-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button apple-mellon-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 6. Daily Tropical twist-->
+                    <div class="product-card">
+                        <a href="/njoy-daily-tropical-twist">
+                            <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/134/730/tropical_1__37105.1527557163.png?c=2&imbypass=on" alt="tropical twist">
+                            <div class="product-options">
+                                <div class="title">
+                                    The Daily<br>
+                                    <span class="big tropical-text">Tropical twist</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tropical-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tropical-text tropical-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment tropical-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button tropical-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 7. Daily Watermelon -->
+                    <div class="product-card">
+                            <a href="/njoy-daily-watermelon">
+                                <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/133/731/watermellon_1__43028.1527557196.png?c=2&imbypass=on" alt="watermelon">
+                                <div class="product-options">
+                                    <div class="title">
+                                        The Daily<br>
+                                        <span class="big watermelon-text">Watermelon</span>
+                                    </div>
+                                    <div class="price">
+                                        <span class="watermelon-text">$5.99</span>
+                                    </div>
+                                    <div class="qty-form">
+                                        <span class="decrement watermelon-text watermelon-border">-</span>
+                                        <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                        <span class="increment watermelon-text watermelon-border">+</span>
+                                    </div>
+                                    <div class="add-to-cart">
+                                        <div class="add-to-cart-button watermelon-button">Buy Now</div>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+                    <!-- 8. Daily -->
+                    <div class="product-card">
+                            <a href="/njoy-daily-apple-crisp">
+                                <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/images/stencil/400x400/products/135/733/APPLE_1__19024.1527557337.png?c=2&imbypass=on" alt="apple crisp">
+                            <div class="product-options">
+                                <div class="title">
+                                    The Daily<br>
+                                    <span class="big tobacco-text">Apple Crisp</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tobacco-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tobacco-text tobacco-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment tobacco-text tobacco-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button tobacco-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-header-container">
+            <h2 class="products-heading"><span>Pre-filled Tanks</span></h2>
+            <div class="products__subheading">More vapor, more flavor</div>
+            <div class="">
+                <div class="row productsGrid prefilled">
+                    <!-- 1. PFT classic tobacco -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tanks-classic-tobacco">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/125/images/508/tobacco__80233.1528237228.1280.1280.png" alt="pft classic tobacco">
+                            <div class="product-options">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big tobacco-text">Classic Tobacco</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tobacco-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tobacco-text tobacco-border">-</span>
+                                    <span class="number tobacco-text">0</span>
+                                    <span class="increment tobacco-text tobacco-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button tobacco-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 2. PFT Menthol -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tanks-menthol/">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/126/images/509/menthol__14123.1528237325.1280.1280.png" alt="pft menthol ">
+                            <div class="product-options">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big menthol-text">Menthol</span>
+                                </div>
+                                <div class="price">
+                                    <span class="menthol-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement menthol-text menthol-border">-</span>
+                                    <span class="number">0</span>
+                                    <span class="increment menthol-text menthol-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button menthol-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 3. PFT Blue+Blackberry -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tanks-blue-black-berry/">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/127/images/510/blueberry__79926.1528237395.1280.1280.png" alt="pft blue and blackberry">
+                            <div class="product-options">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big blueberry-text">Blue+blackberry</span>
+                                </div>
+                                <div class="price">
+                                    <span class="blueberry-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement blueberry-text blueberry-border">-</span>
+                                    <span class="number">0</span>
+                                    <span class="increment blueberry-text blueberry-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button blueberry-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 4. PFT Apple melon -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tanks-apple-melon">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/131/images/511/melon__51128.1528237499.1280.1280.png" alt="pft apple melon">
+                            <div class="product-options">
+                                <div class="title">
+                                    pre-filled<br>
+                                    <span class="big apple-mellon-text">Apple Melon</span>
+                                </div>
+                                <div class="price">
+                                    <span class="apple-mellon-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement apple-mellon-text apple-mellon-border">-</span>
+                                    <span class="number apple-mellon-text">0</span>
+                                    <span class="increment apple-mellon-text apple-mellon-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button apple-mellon-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 5. PFT Tropical twist -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tanks-tropical-twist">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/129/images/512/pineapple__94284.1528237565.1280.1280.png" alt="pft tropical twist">
+                            <div class="product-options">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big tropical-text">Tropical twist</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tropical-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tropical-text tropical-border">-</span>
+                                    <span class="number tropical-text">0</span>
+                                    <span class="increment tropical-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button tropical-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 6. PFT Apple Crisp -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tanks-apple-crisp">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/130/images/513/apple__33296.1528237617.1280.1280.png" alt="pft apple crisp">
+                            <div class="product-options">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big tobacco-text">Apple Crisp</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tobacco-text">$5.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tobacco-text tobacco-border">-</span>
+                                    <span class="number tobacco-text">0</span>
+                                    <span class="increment tobacco-text tobacco-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button tobacco-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 7. PFT Vaping Compact -->
+                    <div class="product-card">
+                        <a href="/njoy-convenience-vaping-compact-battery/">
+                            <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/products/122/images/746/battery__87827.1528393820.1280.1280.png" alt="vaping compact battery">
+                            <div class="product-options blueberry">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big black-text">Compact Battery</span>
+                                </div>
+                                <div class="price">
+                                    <span class="black-text">$29.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement black-text black-border">-</span>
+                                    <span class="number">0</span>
+                                    <span class="increment black-text black-border">+</span>
+                                </div>
+                                <div class="add-to-cart" style="top: 160px;">
+                                    <button class="add-to-cart-button black-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 8. PFT Battery -->
+                    <div class="product-card">
+                        <a href="/njoy-pre-filled-tank-battery">
+                            <img class="home-image" src="https://cdn7.bigcommerce.com/s-59e97impct/products/123/images/747/battery2__37531.1528393947.1280.1280.png" alt="pft battery">
+                            <div class="product-options blueberry" style="left: 80px; top:-10px">
+                                <div class="title">
+                                    Pre-filled<br>
+                                    <span class="big black-text">Battery</span>
+                                </div>
+                                <div class="price">
+                                    <span class="black-text">$19.99</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement black-text black-border">-</span>
+                                    <span class="number">0</span>
+                                    <span class="increment black-text black-border">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <button class="add-to-cart-button black-button">Buy Now</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-header-container">
+            <h2 class="products-heading"><span>The King</span></h2>
+            <div class="products__subheading">The iconic original e-cig</div>
+            <div class="row productsGrid">
+                <div class="product-card">
+                    <form class="form" method="post" action="https://njoy.com/cart.php" enctype="multipart/form-data" data-cart-item-add="">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="130">
+                        <input name="attribute[142]" id="attribute_142" type="hidden" value="194">
+                        <a href="/njoy-king-bold-5-pack">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/133/images/497/tob__40037.1528131782.1280.1280.png" alt="bold tobacco">
+                            <div class="product-options">
+                                <div class="title">
+                                    The King<br>
+                                    <span class="big tobacco-text">Bold Tobacco</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tobacco-text">$29.95</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tobacco-text tobacco-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment tobacco-text tobacco-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button tobacco-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </form>
+                </div>
+                <div class="product-card">
+                    <form class="form" method="post" action="https://njoy.com/cart.php" enctype="multipart/form-data" data-cart-item-add="">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="130">
+                        <input name="attribute[142]" id="attribute_142" type="hidden" value="194">
+                        <a href="/njoy-king-gold-5-pack">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/134/images/496/tobx__02011.1528131688.1280.1280.png" alt="gold tobacco">
+                            <div class="product-options">
+                                <div class="title">
+                                    The King<br>
+                                    <span class="big tobacco-text">Gold Tobacco</span>
+                                </div>
+                                <div class="price">
+                                    <span class="tobacco-text">$29.95</span>
+                                </div>
+                                <div class="qty-form">
+                                    <span class="decrement tobacco-text tobacco-border inc-bttn">-</span>
+                                    <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                    <span class="increment tobacco-text tobacco-border inc-bttn">+</span>
+                                </div>
+                                <div class="add-to-cart">
+                                    <div class="add-to-cart-button tobacco-button">Buy Now</div>
+                                </div>
+                            </div>
+                        </a>
+                    </form>
+                </div>
+                <div class="product-card" style="">
+                    <form class="form" method="post" action="https://njoy.com/cart.php" enctype="multipart/form-data" data-cart-item-add="">
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="130">
+                        <input name="attribute[142]" id="attribute_142" type="hidden" value="194">
+                        <a href="/njoy-king-menthol-5-pack/">
+                            <img class="home-image" src="https://cdn8.bigcommerce.com/s-41vy970mga/products/135/images/495/menth__88689.1528131558.1280.1280.png" alt="menthol smooth">
+                        <div class="product-options">
+                            <div class="title">
+                                The King<br>
+                                <span class="big menthol-text">Menthol</span>
+                            </div>
+                            <div class="price">
+                                <span class="menthol-text">$29.95</span>
+                            </div>
+                            <div class="qty-form">
+                                <span class="decrement menthol-text menthol-border inc-bttn">-</span>
+                                <input class="form-input form-input--incrementTotal number tobacco-text" id="qty[]" name="qty[]" type="tel" value="1" data-quantity-min="0" data-quantity-max="0" min="1" pattern="[0-9]*" aria-live="polite">
+                                <span class="increment menthol-text menthol-border inc-bttn">+</span>
+                            </div>
+                            <div class="add-to-cart">
+                                <div class="add-to-cart-button menthol-button">Buy Now</div>
+                            </div>
+                        </div>
+                            </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cta-section--alt">
+        {{> components/custom/newsletter}} {{> components/custom/home-subscription-cta}}
+    </div>
+    <div class="press">
+        <!-- press section -->
+        {{> components/custom/home-press}}
+    </div>
+    <div class="cta-section--alt">
+        <!-- partners section -->
+        {{> components/custom/partners}}
+    </div>
+</div>
+{{/partial}} {{> layout/base}}
+<script>
+$(".inc-bttn").on("click", function() {
+  var bttn = $(this);
+  var input = bttn.parent().find("input");
+  var oldVal = input.val();
+  var newVal = 0;
+
+  if (bttn.text() == "+") {
+	  newVal = parseFloat(oldVal) + 1;
+	} else if (oldVal > 0) {
+    newVal = parseFloat(oldVal) - 1;
+  }
+
+  input.val(newVal);
+});
+</script>

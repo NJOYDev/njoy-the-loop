@@ -1,0 +1,83 @@
+<section class="testimonials-carousel"
+data-slick='{
+    "dots": true,
+    "infinite": true,
+    "mobileFirst": true,
+    "slidesToShow":1,
+    "slidesToScroll": 1,
+    "arrows": false,
+    "lazyLoad": "progressive",
+    "responsive": [
+        {
+            "breakpoint": 550,
+            "settings": {
+                "slidesToShow": 2,
+                "slidesToScroll": 1
+            }
+        },
+        {
+            "breakpoint": 800,
+            "settings": {
+                "slidesToShow": 3,
+                "slidesToScroll": 1,
+                "dots": true, 
+                "arrows": true                           
+            }
+        }
+    ]
+
+}'
+>
+<div class="testimonials-slide">
+    {{#each product.custom_fields}}
+        {{#if name '===' 'Product Review Image 1'}}
+            <img class="testimonial-image" src="{{value}}" alt="{{name}}">
+        {{/if}}
+        {{#if name '===' 'Product Review Text 1'}}
+            <div class="testimonials-text">
+                {{value}}
+            </div>
+        {{/if}}
+        {{#if name '===' 'Product Review CTA 1'}}
+            <div class="testimonial-cta">
+                {{value}}
+            </div>
+        {{/if}}
+    {{/each}}
+</div>
+<div class="testimonials-slide">
+    {{#each product.custom_fields}}
+        {{#if name '===' 'Product Review Image 2'}}
+            <img class="testimonial-image" src="{{value}}" alt="{{name}}">
+        {{/if}}
+        {{#if name '===' 'Product Review Text 2'}}
+            <div class="testimonials-text">
+                {{value}}
+            </div>
+        {{/if}}
+        {{#if name '===' 'Product Review CTA 2'}}
+            <div class="testimonial-cta">
+                {{value}}
+            </div>
+        {{/if}}
+    {{/each}}
+</div>
+<div class="testimonials-slide">
+    {{#each product.custom_fields}}
+        {{#if name '===' 'Product Review Image 3'}}
+            <img class="testimonial-image" src="{{value}}" alt="{{name}}">
+        {{/if}}
+        {{#if name '===' 'Product Review Text 3'}}
+            <div class="testimonials-text">
+                {{value}}
+            </div>
+        {{/if}}
+        {{#if name '===' 'Product Review CTA 3'}}
+            <div class="testimonial-cta">
+                {{value}}
+            </div>
+        {{/if}}
+    {{/each}}
+</div>
+    
+</section>

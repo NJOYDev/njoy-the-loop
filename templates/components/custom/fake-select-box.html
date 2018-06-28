@@ -1,0 +1,18 @@
+
+<div class="js-autoship-fake" >
+    <label><input type="radio" class="js-oneTimePurchase" name="delivery-frequency" 
+        {{#forEach this.values}}{{#if isLast}}data-one-time-purchase={{id}}{{/if}}{{/forEach}}
+         checked>One-Time Purchase</label>
+    <label><input type="radio" class="js-subscribeSave"  name="delivery-frequency">Auto-Ship &amp; Save</label>
+    <select>
+        {{#forEach this.values}}
+            {{#if isFirst}}
+                <option data-option-select="{{id}}" selected>{{label}}</option>
+            {{else}}
+                {{#unless isLast}}
+                    <option data-option-select="{{id}}">{{label}}</option>
+                {{/unless}}
+            {{/if}}
+        {{/forEach}}
+    </select>
+</div>

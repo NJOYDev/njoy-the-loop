@@ -1,0 +1,30 @@
+{{#each product.custom_fields}}
+    {{#if name '===' 'Product Banner Image'}}
+        <div class="product-banner-image" style="background-image: url({{value}})"/>
+        </div>
+    {{/if}}
+{{/each}}
+<div class="product-banner--content">
+    {{#each product.custom_fields}}
+        {{#if name '===' 'Product Banner Heading'}}
+            <div class="product--banner-heading">
+                {{value}}
+            </div>
+        {{/if}}
+        {{#if name '===' 'Product Banner Text'}}
+            <div class="product--banner-text">
+                {{value}}
+            </div>
+        {{/if}}
+        {{#if name '===' 'Product Banner Link'}}
+            <a href="{{value}}" class="product-banner-link">
+
+            </a>
+        {{/if}}
+        {{#if name '===' 'Product Banner Button'}} 
+            <div class="product--banner-cta button--primary-light js-productBannerButton" data-banner-text="{{value}}">
+                {{value}}
+            </div>
+        {{/if}}
+    {{/each}}
+</div>

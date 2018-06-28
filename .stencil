@@ -1,0 +1,14 @@
+{
+  "normalStoreUrl": "http://njoy-qa.mybigcommerce.com/",
+  "port": 3000,
+  "clientId": "n0d58gzxx9hc268n8ovxhmqsqciy4s8",
+  "accessToken": "avd3jnsfsosuia2to607p26iaez815w",
+  "customLayouts": {
+    "brand": {},
+    "category": {
+        "custom-category-autoship": "/auto-ship/"
+    },
+    "page": {},
+    "product": {}
+  }
+}
