@@ -705,11 +705,67 @@ Custom styles for 'The Loop' product
         width: 100%;
     }
     .loop-introduction {
-        width: 100%;
-        margin-top: 50px;
+        position: relative;
+        width: 50vw;
+        margin: 50px 5vw;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .intro-image {
+            margin-right: 5em;
+        }
+        .image {
+            max-height: 400px;
+            max-width: 400px;
+        }
+        .intro-and-price {
+            max-width: 375px;
+            height: 400px;
+            h1 {
+                font-weight: bolder;
+                text-transform: uppercase;
+                margin-bottom: 2em;
+            }
+            p.description {
+                font-size: 20px;
+            }
+            .price {
+                position: absolute;
+                bottom: 10px;
+                font-size: 24px;
+                a {
+                    text-decoration: none;
+                    margin-left: 100px;
+                    font-weight: 500;
+                }
+            }
+        }
     }
     .loop-video {
-        width: 100%;
+        position: relative;
+        width: 50vw;
+        margin: 50px 5vw;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .loop-gallery {
+        position: relative;
+        width: 50vw;
+        margin: 50px 5vw;
+        text-transform: capitalize;
+        text-align: center;
+        h1.title {
+            font-size: 30px;
+            font-weight: bolder;
+            margin-top: 1px !important;
+        }
+        h4.subtitle {
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 600;
+            margin-top: 1px !important;
+        }
     }
     .loop-nav {
         width: 100%;
