@@ -691,3 +691,41 @@ tr.table-row {
 .productView-thumbnails .video-figure img {
     max-width: 94px;
 }
+
+/**
+Custom styles for 'The Loop' product
+ */
+.custom-product-loop {
+    width: 70vw;
+    margin: 100px 15vw;
+    .loop-specs {
+        width: 100%;
+    }
+    .loop-gallery {
+        width: 100%;
+    }
+    .loop-introduction {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .loop-video {
+        width: 100%;
+    }
+    .loop-nav {
+        width: 100%;
+        position: relative;
+        left: 40vw;
+        ul > li {
+            list-style: none;
+            display: inline-block;
+            height: 30px;
+            width: 120px;
+            margin-left: 10px;
+            padding: 5px 0;
+            vertical-align: center;
+            align-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
