@@ -3,12 +3,12 @@
     <div class="container">
         <div class="row loop--nav">
             <ul class="loop--nav">
-                <li><a href="#"></a>Overview</li>
-                <li><a href="#"></a>Tech Specs</li>
+                <li><a href="#overview" id="scrollToOverview"></a>Overview</li>
+                <li><a href="#specs" id="scrollToSpecs"></a>Tech Specs</li>
                 <li class="order"><a href="#"></a>Order</li>
             </ul>
         </div>
-        <div class="row loop--intro">
+        <div id="overview" class="row loop--intro">
             <div class="col-5">
                 <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png" alt="the loop">
             </div>
@@ -29,29 +29,38 @@
                         width="650" height="400"></object>
             </div>
         </div>
-        <div class="row loop-gallery">
+        <div class="row loop-gallery pcssc-popover">
             <h1 class="title">
                 What's in the box
             </h1>
             <h4 class="subtitle">
                 - Loop Pods sold separately -
             </h4>
-            <div class="col-3">
-                <figure>
+            <div class="col-3" tabindex="0" class="pure-button popover-toggle popover-toggle-dismissable popover-dismissable-right">
+                <figure id="galleryOne">
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
                              alt="picture one">
                         <figcaption>2 Rechargeable battery sticks</figcaption>
                 </figure>
             </div>
+            <div class="popover popover-bottom">
+                <div class="arrow left-arrow"></div>
+                <h3 class="popover-title">2 Rechargeable battery sticks</h3>
+                <div class="popover-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
             <div class="col-3">
-                <figure>
+                <figure id="galleryTwo">
                     <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
                          alt="picture one">
                     <figcaption>Sleek charging case</figcaption>
                 </figure>
             </div>
             <div class="col-3">
-                <figure>
+                <figure id="galleryThree">
                     <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
                          alt="picture one">
                     <figcaption>Rapid Charge Accessory</figcaption>
@@ -59,14 +68,14 @@
                 </figure>
             </div>
             <div class="col-3">
-                <figure>
+                <figure id="galleryFour">
                     <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
                          alt="picture one">
                     <figcaption>USB-USBc Power Cable</figcaption>
                 </figure>
             </div>
         </div>
-        <div class="row loop--specs">
+        <div id="specs" class="row loop--specs">
             <div class="col-6 spec-title">
                 <h1>Sleek Charging Case</h1>
             </div>
@@ -107,127 +116,6 @@
         </div>
     </div>
 </div>
-<!--<div class="custom-product-loop container">
-    <section class="loop-nav hide-on-mobile">
-        <ul>
-            <li>Overview</li>
-            <li>Tech Specs</li>
-            <li class="button&#45;&#45;primary">Pre-Order</li>
-        </ul>
-    </section>
-&lt;!&ndash;
-    <div class="container__row">
-        <div class="container__row-4">
-            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
-                 alt="" class="loop-image">
-        </div>
-        <div class="container__row-4">
-            <div class="intro-and-price">
-                <h1 class="strong">The Loop</h1>
-                <p class="description">
-                    With 2 Sticks, 36-hour charging case and advanced nicotine delivery, you've got an endless pack of smokes in your pocket.
-                </p>
-                <div class="price">
-                    <span>$34.99</span>
-                    <span><a href="#">Pre-Order Today ></a></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container__row">
-        <div class="container__row-12">
-            <object class="vid" data="https://www.youtube.com/embed/cLtRhVpwOgA"
-                    width="650" height="400"></object>
-        </div>
-    </div>
-
-    <div class="container__row">
-        <div class="container__row-4">
-            <h1 class="title">Sleek Charging Case</h1>
-        </div>
-        <div class="container__row-4">
-            <p class="description">
-                Keep your sticks charged on the go. The Loop carrying case delivers 36 hours of dual-stick charging in a sleek device. No matter how much you use it, 1 stick is always ready to go.
-            </p>
-        </div>
-    </div>&ndash;&gt;
-
-&lt;!&ndash;    <section class="">
-        <div class="loop-introduction">
-            <div class="intro-image">
-                <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png" alt="" class="image">
-            </div>
-            <div class="intro-and-price">
-                <h1 class="strong">The Loop</h1>
-                <p class="description">
-                    With 2 Sticks, 36-hour charging case and advanced nicotine delivery, you've got an endless pack of smokes in your pocket.
-                </p>
-                <div class="price">
-                    <span>$34.99</span>
-                    <span><a href="#">Pre-Order Today ></a></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="loop-video">
-            &lt;!&ndash;<iframe width="600" height="400" src="https://www.youtube.com/embed/cLtRhVpwOgA" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>&ndash;&gt;
-            <object data="https://www.youtube.com/embed/cLtRhVpwOgA"
-                    width="650" height="400"></object>
-        </div>
-
-        <div class="loop-gallery">
-            <h1 class="title">What's in the box</h1>
-            <h4 class="subtitle">- Loop Pods sold separately -</h4>
-            <div class="picture-set">
-                <figure>
-                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
-                         alt="picture one">
-                    <figcaption>2 Rechargable battery sticks</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
-                         alt="picture one">
-                    <figcaption>Sleek charging case</figcaption>
-                </figure>
-                <figure>
-                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
-                         alt="picture one">
-                    <figcaption>Rapid Charge Accessory</figcaption>
-
-                </figure>
-                <figure>
-                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
-                         alt="picture one">
-                    <figcaption>USB-USBc Power Cable</figcaption>
-                </figure>
-            </div>
-        </div>
-
-        <div class="loop-specs">
-            <h1 class="title">Sleek Charging Case</h1>
-            <p class="description">
-                Keep your sticks charged on the go. The Loop carrying case delivers 36 hours of dual-stick charging in a sleek device. No matter how much you use it, 1 stick is always ready to go.
-            </p>
-        </div>
-        <img class="tech-spec-image" src="http://via.placeholder.com/650x400" alt="placeholder">
-        <div class="loop-specs">
-            <h1 class="title">Duelling Batteries</h1>
-            <p class="description">
-                The cylinder-shaped battery sticks mirror the form of cigarettes, and are compatible with replaceble Loop Pods that come in many flavors. Switch, twist and enjoy.
-            </p>
-        </div>
-        <img class="tech-spec-image" src="http://via.placeholder.com/650x400" alt="placeholder">
-        <div class="loop-specs">
-            <h1 class="title">Packs A Punch</h1>
-            <p class="description">
-                Loop hits like a cigarette and doesn't let up. With advanced nicotine delivery system it remains consistent even as the battery wanes.
-            </p>
-        </div>
-        <img class="tech-spec-image" src="http://via.placeholder.com/650x400" alt="placeholder">
-    </section>&ndash;&gt;
-</div>-->
-
 
 {{/partial}}
 
