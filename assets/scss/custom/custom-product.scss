@@ -25,15 +25,15 @@ $heading-font-bold: "Avenir-Light";
     padding: $mobile-gutter;
 
     @include breakpoint("medium") {// 801px and up
-        position: relative;    
-    
+        position: relative;
+
         @include breakpoint("large") {// 1140px and up
             padding: $desktop-gutter;
             display: flex;
             padding-top: 5rem;
         }
     }
-    
+
 }
 
 .product-out-of-stock {
@@ -49,7 +49,7 @@ $heading-font-bold: "Avenir-Light";
         left: 0;
         right: auto;
         width: 47%;
-        
+
         @include breakpoint("large") {// 1140px and up
             right: 0;
             width: 65%;
@@ -71,7 +71,7 @@ $heading-font-bold: "Avenir-Light";
     @include breakpoint("medium") {// 801px and up
         top: 25%;
         left: 5rem;
-        
+
         @include breakpoint("large") {// 1140px and up
             top: 40%;
             left: 10rem;
@@ -84,11 +84,11 @@ $heading-font-bold: "Avenir-Light";
 .productView-images {
     width: 100%;
     position: relative;
-    
+
     @include breakpoint("medium") {// 801px and up
         width: 50%;
         position: static;
-        
+
         @include breakpoint("large") {// 1140px and up
             order: 2;
             flex: 1.5;
@@ -98,11 +98,11 @@ $heading-font-bold: "Avenir-Light";
 
 .productView-product {
     border-bottom: 1px solid $text-color-med;
-    
+
     @include breakpoint("medium") {// 801px and up
         border: none;
         overflow: hidden;
-        
+
         @include breakpoint("large") {// 1140px and up
             order: 1;
             flex: 0.9;
@@ -113,12 +113,12 @@ $heading-font-bold: "Avenir-Light";
 .productView-details {
     width: 100%;
     margin-top: 3rem;
-    
+
     @include breakpoint("medium") {// 801px and up
         width: 50%;
         float: none;
     }
-    
+
     @include breakpoint("large") {// 1140px and up
         order: 3;
         flex: 0.8;
@@ -128,7 +128,7 @@ $heading-font-bold: "Avenir-Light";
 
 .productView-options {
     position: relative;
-    
+
     @include breakpoint("large") {// 1140px and up
         position: static;
         display: flex;
@@ -144,8 +144,8 @@ $heading-font-bold: "Avenir-Light";
     height: 100%;
     width: 100%;
     background: rgba(247, 247, 247, 0.86);
-    
-   
+
+
    @include breakpoint("large") {// 1140px and up
        display: none;
    }
@@ -153,7 +153,7 @@ $heading-font-bold: "Avenir-Light";
 
 .productView-options .form-action {
     padding: 0;
-    
+
     @include breakpoint("large") {// 1140px and up
         display: block;
     }
@@ -161,7 +161,7 @@ $heading-font-bold: "Avenir-Light";
 
 .productView-options .form-action .button {
     width: 100%;
-    
+
     @include breakpoint("medium") {// 801px and up
         width: 100%;
         float: left;
@@ -173,7 +173,7 @@ $heading-font-bold: "Avenir-Light";
 }
 
 .free-shipping--wrapper {
-    
+
     @include breakpoint("medium") {// 801px and up
         float: left;
         width: 100%;
@@ -182,10 +182,10 @@ $heading-font-bold: "Avenir-Light";
 
 .productView-title {
     text-transform: uppercase;
-    
+
     @include breakpoint("large") {// 1140px and up
         margin-top: 0;
-        
+
         @include breakpoint("large") {// 1140px and up
             font-size: 30px;
         }
@@ -195,7 +195,7 @@ $heading-font-bold: "Avenir-Light";
 .productView-price {
     font-family: $heading-font-bold;
     font-size: 20px;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 30px;
     }
@@ -203,12 +203,12 @@ $heading-font-bold: "Avenir-Light";
 
 .productView-options {
     margin-bottom: 0;
-    
+
     @include breakpoint("medium") {// 801px and up
         display: inline-block;
         width: 100%;
         vertical-align: top;
-        
+
         @include breakpoint("large") {// 1140px and up
             display: block;
             width: auto;
@@ -246,7 +246,7 @@ $heading-font-bold: "Avenir-Light";
     background-color: $text-color-light;
     position: relative;
     min-height: 320px;
-    
+
     @include breakpoint("medium") {// 801px and up
         min-height: 460px;
     }
@@ -269,7 +269,7 @@ $heading-font-bold: "Avenir-Light";
     color: $text-color-darker;
     text-transform: uppercase;
     padding-right: 1rem;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 16px;
     }
@@ -307,7 +307,7 @@ $heading-font-bold: "Avenir-Light";
     font-family: $heading-font;
     text-transform: uppercase;
     padding-top: 2px;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 16px;
     }
@@ -318,7 +318,7 @@ $heading-font-bold: "Avenir-Light";
     margin-right: 5px;
     height: 1.5rem;
     width: 2rem;
-    
+
     @include breakpoint("large") {// 1140px and up
         height: 2rem;
     }
@@ -346,7 +346,7 @@ $heading-font-bold: "Avenir-Light";
     color: $text-color-light;
     overflow: hidden;
     width: 100%;
-    
+
     @include breakpoint("large") {// 1140px and up
         padding: $desktop-gutter;
     }
@@ -357,7 +357,7 @@ $heading-font-bold: "Avenir-Light";
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
-    
+
     @include breakpoint("large") {// 1140px and up
         margin-bottom: 0;
     }
@@ -372,10 +372,10 @@ $heading-font-bold: "Avenir-Light";
 .info-slide-content {
     display: inline-block;
     vertical-align: middle;
-    
+
     @include breakpoint("small") {// 501px and up
         width: 65%;
-        
+
         @include breakpoint("large") {// 1140px and up
             width: 70%;
         }
@@ -396,7 +396,7 @@ $heading-font-bold: "Avenir-Light";
 
 .info-text {
     font-size: 12px;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 14px;
     }
@@ -420,7 +420,7 @@ $heading-font-bold: "Avenir-Light";
     width: 8px;
     height: 8px;
     background: $text-color-light;
-    
+
 }
 .product-info-slider .slick-dots .slick-active button {
     width: 10px;
@@ -440,7 +440,7 @@ $heading-font-bold: "Avenir-Light";
 .product-testimonials .page-heading {
     text-transform: uppercase;
     color: $text-color-dark;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 35px;
     }
@@ -449,7 +449,7 @@ $heading-font-bold: "Avenir-Light";
 .related-products--wrapper {
     margin-top: 2rem;
     padding-bottom: 2rem;
-    
+
     @include breakpoint("large") {// 1140px and up
         padding: $desktop-gutter;
         margin-bottom: 4rem;
@@ -474,7 +474,7 @@ $heading-font-bold: "Avenir-Light";
     top: 50%;
     color: $text-color-light;
     padding: $mobile-gutter;
-    
+
     @include breakpoint("large") {// 1140px and up
         padding: $desktop-gutter;
     }
@@ -485,7 +485,7 @@ $heading-font-bold: "Avenir-Light";
     font-size: 50px;
     text-transform: uppercase;
     line-height: 4rem;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 75px;
     }
@@ -497,7 +497,7 @@ $heading-font-bold: "Avenir-Light";
     width: 60%;
     text-align: center;
     margin-top: 1rem;
-    
+
     @include breakpoint("large") {// 1140px and up
         width: 35%;
     }
@@ -524,7 +524,7 @@ $heading-font-bold: "Avenir-Light";
 }
 
 .testimonials-carousel {
-    
+
     @include breakpoint("large") {// 1140px and up
         padding-top: 2rem;
         padding-bottom: 5rem;
@@ -534,7 +534,7 @@ $heading-font-bold: "Avenir-Light";
 
 .testimonials-slide {
     text-align: center;
-    
+
     @include breakpoint("large") {// 1140px and up
        float: none;
        display: inline-block !important;
@@ -568,7 +568,7 @@ $heading-font-bold: "Avenir-Light";
     margin-bottom: 16px;
     width: 100%;
     margin-top: 1rem;
-    
+
     @include breakpoint("medium") {// 801px and up
         width: 100%;
         margin-top: 0;
@@ -625,12 +625,12 @@ tr.table-row {
 
 .js-autoship-fake {
     margin-bottom: 2rem;
-    
+
     @include breakpoint("medium") {// 801px and up
         width: 100%;
         margin-bottom: 2rem;
     }
-    
+
     @include breakpoint("large") {// 1140px and up
         display: flex;
         flex-direction: column;
@@ -656,7 +656,7 @@ tr.table-row {
 }
 
 .js-autoship-fake label {
-    margin-bottom: 1rem;  
+    margin-bottom: 1rem;
     font-family: $heading-font;
     font-size: 18px;
     text-transform: uppercase;
@@ -671,20 +671,20 @@ tr.table-row {
     padding: 1rem;
     text-transform: uppercase;
     font-size: 15px;
-    
+
     @include breakpoint("large") {// 1140px and up
         font-size: 18px;
     }
 }
 
 .productView-thumbnails {
-    
+
     @include breakpoint("medium") {// 801px and up
         display: flex;
         justify-content: center;
         max-width: 475px;
-        margin-right: auto; 
-        margin-left: auto; 
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -692,140 +692,3 @@ tr.table-row {
     max-width: 94px;
 }
 
-/**
-Custom styles for 'The Loop' product
- */
-.custom-product-loop {
-    width: 70vw;
-    margin: 100px 15vw;
-    .loop-nav {
-        width: 100%;
-        position: relative;
-        left: 40vw;
-        ul > li {
-            list-style: none;
-            display: inline-block;
-            height: 30px;
-            width: 120px;
-            margin-left: 10px;
-            padding: 5px 0;
-            vertical-align: center;
-            align-content: center;
-            text-align: center;
-            cursor: pointer;
-        }
-    }
-    .loop-introduction {
-        position: relative;
-        width: 50vw;
-        margin: 50px 7vw;
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        .intro-image {
-            margin-right: 5em;
-        }
-        .image {
-            max-height: 400px;
-            max-width: 400px;
-        }
-        .intro-and-price {
-            max-width: 375px;
-            height: 400px;
-            h1 {
-                font-weight: bolder;
-                text-transform: uppercase;
-                margin-bottom: 2em;
-            }
-            p.description {
-                font-size: 20px;
-            }
-            .price {
-                position: absolute;
-                bottom: 10px;
-                font-size: 24px;
-                a {
-                    text-decoration: none;
-                    margin-left: 100px;
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-    .loop-video {
-        position: relative;
-        width: 50vw;
-        margin: 50px 7vw;
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .loop-gallery {
-        position: relative;
-        width: 50vw;
-        margin: 50px 7vw;
-        text-transform: capitalize;
-        text-align: center;
-        h1.title {
-            font-size: 30px;
-            font-weight: bolder;
-            margin-top: 1px !important;
-        }
-        h4.subtitle {
-            font-size: 18px;
-            font-style: italic;
-            font-weight: 600;
-            margin-top: 1px !important;
-        }
-        .picture-set {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            figure {
-                max-width: 200px;
-                height: 100%;
-                margin: 10px;
-                figcaption {
-                    font-size: 16px;
-                    font-weight: bolder;
-                }
-            }
-            img {
-                height: 300px;
-                width: 150px;
-            }
-        }
-    }
-    .loop-specs {
-        position: relative;
-        width: 50vw;
-        margin: 0 7vw;
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        .title {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 300px;
-            font-size: 24px;
-            font-weight: bolder;
-            text-transform: capitalize;
-            margin-right: 1em
-        }
-        .description{
-            font-size: 18px;
-            font-weight: 400;
-            width: 375px;
-        }
-    }
-}
-
-.tech-spec-image {
-    width: 50vw;
-    margin: 5px 7vw 50px 7vw;
-    /*margin-left: 7vw;
-    margin-right: 7vw;
-    margin-top: 5px;
-    margin-bottom: 50px;*/
-}
