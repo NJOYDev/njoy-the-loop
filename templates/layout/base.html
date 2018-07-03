@@ -9,16 +9,11 @@
 		{{{ head.config }}}
 		{{#block "head"}} {{/block}}
 		<link href="{{ head.favicon }}" rel="shortcut icon">
-		<link rel="stylesheet"
-			  href="https://unpkg.com/purecss-components@0.0.12/dist/pure-components.css"
-			  integrity="sha384-3vxDvOU9lXU+bcgTkQNhnflfhRt/EFEGLtd3jQn8vQRGGQlpBX9VOq4oIufzLOO9"
-			  crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		{{{stylesheet '/assets/css/theme.css'}}}
 		{{ getFontsCollection }}
 		<script src="{{cdn 'assets/modernizr-custom.js'}}"></script>
-
-
 		{{{head.scripts}}}
 		{{{head.rsslinks}}}
 
@@ -147,5 +142,36 @@
         }, 1000);
 
         </script>
+		<script src="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.js"></script>
+		<script>
+            $('#showPopOne').webuiPopover({
+				url:'#galleryPopOne',
+                width:300,
+				placement: 'bottom',
+                closeable:true,
+				trigger: 'hover'
+            });
+            $('#showPopTwo').webuiPopover({
+				url:'#galleryPopTwo',
+                width:300,
+                placement: 'bottom',
+                closeable:true,
+                trigger: 'hover'
+            });
+            $('#showPopThree').webuiPopover({
+				url:'#galleryPopThree',
+                width:300,
+                placement: 'bottom',
+                closeable:true,
+                trigger: 'hover'
+            });
+            $('#showPopFour').webuiPopover({
+				url:'#galleryPopFour',
+                width:300,
+                placement: 'bottom',
+                closeable:true,
+                trigger: 'hover'
+            });
+		</script>
 	</body>
 </html>
