@@ -10,6 +10,7 @@
 		{{#block "head"}} {{/block}}
 		<link href="{{ head.favicon }}" rel="shortcut icon">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.webui-popover/1.2.1/jquery.webui-popover.min.css">
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		{{{stylesheet '/assets/css/theme.css'}}}
 		{{ getFontsCollection }}
@@ -55,7 +56,7 @@
 	<body class="page--{{page_type}}">
 	    <!-- NJOY Google Tag Manager (noscript) -->
 		<noscript>
-			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W67PXC"height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W67PXC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
@@ -93,6 +94,22 @@
 		{{{snippet 'footer'}}}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 		<script>
+            $("#scrollToOverview").click(function(e) {
+                e.preventDefault();
+                if($('body').find("#overview").length !== 0) {
+                    $('html, body').animate({
+                        scrollTop: $("#overview").offset().top-120
+                    }, 1500);
+                }
+            });
+            $("#scrollToSpecs").click(function(e) {
+                e.preventDefault();
+                if($('body').find("#specs").length !== 0) {
+                    $('html, body').animate({
+                        scrollTop: $("#specs").offset().top-120
+                    }, 1500);
+                }
+            });
 		// Smooth Scroll @deepak
         $("#scrollOnClick").click(function() {
             if($('body').find("#productsView").length !== 0) {
@@ -172,6 +189,16 @@
                 closeable:true,
                 trigger: 'hover'
             });
+
+            $(document).ready(function(){
+                $('.slide-class').slick({
+                    swipe: true,
+					arrows: true,
+					dots: true
+                });
+            });
+
 		</script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	</body>
 </html>
