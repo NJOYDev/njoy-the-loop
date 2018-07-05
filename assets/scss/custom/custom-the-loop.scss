@@ -220,26 +220,35 @@
       }
     }
     .price {
+      display: inline-block;
       font-size: 1.32em;
-      a {
+      form {
         float: right;
-        text-decoration: none;
-        font-weight: 800;
+        position: relative;
+        left: 5em;
+        input[type='submit'] {
+          text-decoration: none;
+          font-weight: 800;
+          background: none;
+          border: none;
+          -webkit-appearance: none;
+        }
       }
+
     }
   }
   .loop--pod {
     position: relative;
     max-width: 80%;
     margin: 10px 8vw;
-    border: 2px solid;
+/*    border: 2px solid;
     border-left-color: lightgreen;
     border-right-color: lightblue;
     border-top-color: lightcoral;
-    border-bottom-color: sandybrown;
+    border-bottom-color: sandybrown;*/
     padding: 2px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #e8eff7;
+/*    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #e8eff7;*/
     figure {
       height: auto;
       margin: 10px;

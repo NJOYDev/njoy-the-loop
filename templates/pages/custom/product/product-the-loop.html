@@ -1,3 +1,15 @@
+---
+product:
+  videos:
+    limit: {{theme_settings.productpage_videos_count}}
+  reviews:
+    limit: {{theme_settings.productpage_reviews_count}}
+  related_products:
+    limit: {{theme_settings.productpage_related_products_count}}
+  similar_by_views:
+    limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+
 {{#partial "page"}}
 <a name="top"></a>
 <div class="the-loop">
@@ -14,13 +26,47 @@
                 <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png" alt="the loop">
             </div>
             <div class="col-7">
-                <h1 class="strong">The Loop</h1>
+                <h1 class="strong">{{product.title}}</h1>
                 <p class="description">
                     With 2 Sticks, 36-hour charging case and advanced nicotine delivery, you've got an endless pack of smokes in your pocket.
                 </p>
                 <div class="price">
-                    <span>$34.99</span>
-                    <span><a href="#">Pre-Order Today ></a></span>
+                    <span>{{product.price.without_tax.formatted}}</span>
+                    <span>
+                        <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
+                              data-cart-item-add>
+                        <input type="hidden" name="action" value="add">
+                        <input type="hidden" name="product_id" value="{{product.id}}"/>
+                        {{#each product.customizations}}
+                        {{{dynamicComponent 'components/products/customizations'}}}
+                        {{/each}}
+                        <div data-product-option-change style="display:none;">
+                            {{#each product.options}}
+                            {{{dynamicComponent 'components/products/options'}}}
+                            {{/each}}
+                        </div>
+                        {{#if product.event_date}}
+                        {{> components/products/event-date}}
+                        {{/if}}
+                        <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
+                            <label class="form-label form-label--alternate">
+                                {{lang 'products.current_stock'}}
+                                <span data-product-stock>{{product.stock_level}}</span>
+                            </label>
+                        </div>
+
+                        <span class="">
+                            <input id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" type="submit"
+                                   value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}">>
+                        </span>
+
+                        {{#if product.out_of_stock}}
+                        <div class="product--oos-mobile">
+                        </div>
+                        {{/if}}
+                    </form>
+                    </span>
+
                 </div>
             </div>
         </div>
@@ -73,21 +119,21 @@
             </h4>
             <div class="col-3" id="showPopOne">
                 <figure id="galleryOne">
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/527/GRAY_sticks_1__17780.1530650543.1280.1280.png?c=2&_ga=2.227846493.1748054265.1530649566-1539551392.1526932389"
                              alt="picture one">
                         <figcaption>2 Rechargeable battery sticks</figcaption>
                 </figure>
             </div>
             <div id="showPopTwo" class="col-3">
                 <figure id="galleryTwo">
-                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/527/GRAY_sticks_1__17780.1530650543.1280.1280.png?c=2&_ga=2.227846493.1748054265.1530649566-1539551392.1526932389"
                          alt="picture one">
                     <figcaption>Sleek charging case</figcaption>
                 </figure>
             </div>
             <div id="showPopThree" class="col-3">
                 <figure id="galleryThree">
-                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                    <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/527/GRAY_sticks_1__17780.1530650543.1280.1280.png?c=2&_ga=2.227846493.1748054265.1530649566-1539551392.1526932389"
                          alt="picture one">
                     <figcaption>Rapid Charge Accessory</figcaption>
 
@@ -163,7 +209,7 @@
                 </p>
             </div>
             <div class="col-12 spec-image">
-                <img src="http://via.placeholder.com/650x400" alt="placeholder">
+                <img src="https://images.unsplash.com/photo-1495098894060-d3bf72198549?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=26766955a575dcc8488066de0e1afa5f&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
             </div>
         </div>
         <div class="row loop--specs">
@@ -176,7 +222,7 @@
                 </p>
             </div>
             <div class="col-12 spec-image">
-                <img src="http://via.placeholder.com/650x400" alt="placeholder">
+                <img src="https://images.unsplash.com/photo-1528056800269-6d121c24de8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be9ad6e385e550c5167a6195b42a0c05&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
             </div>
         </div>
         <div class="row loop--specs">
@@ -189,7 +235,7 @@
                 </p>
             </div>
             <div class="col-12 spec-image">
-                <img src="http://via.placeholder.com/650x400" alt="placeholder">
+                <img src="https://images.unsplash.com/photo-1500560239821-a6a6cb4701e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99717853f3a466004aab446df0d84c04&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
             </div>
         </div>
     </div>
