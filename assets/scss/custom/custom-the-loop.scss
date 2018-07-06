@@ -213,25 +213,19 @@
     }
     .description {
       padding-top: 2em;
-      padding-bottom: 2em;
       font-size: 1.32em;
-      @media only screen and (min-width: $breakpoint-large) {
-        padding-bottom: 7em;
-      }
     }
     .price {
-      display: inline-block;
       font-size: 1.32em;
       form {
-        float: right;
         position: relative;
-        left: 5em;
         input[type='submit'] {
           text-decoration: none;
           font-weight: 800;
-          background: none;
+          bottom: 50px;
+/*          background: none;
           border: none;
-          -webkit-appearance: none;
+          -webkit-appearance: none;*/
         }
       }
 

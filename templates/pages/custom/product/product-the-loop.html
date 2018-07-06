@@ -18,7 +18,7 @@ product:
             <ul class="loop--nav">
                 <li id="scrollToOverview"><a href="#"></a>Overview</li>
                 <li id="scrollToSpecs"><a href="#"></a>Tech Specs</li>
-                <li class="order"><a href="#"></a>Order</li>
+                <li class="order"><a href="#"></a>Pre-Order</li>
             </ul>
         </div>
         <div id="overview" class="row loop--intro">
@@ -31,8 +31,7 @@ product:
                     With 2 Sticks, 36-hour charging case and advanced nicotine delivery, you've got an endless pack of smokes in your pocket.
                 </p>
                 <div class="price">
-                    <span>{{product.price.without_tax.formatted}}</span>
-                    <span>
+                    <div>
                         <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
                               data-cart-item-add>
                         <input type="hidden" name="action" value="add">
@@ -40,7 +39,7 @@ product:
                         {{#each product.customizations}}
                         {{{dynamicComponent 'components/products/customizations'}}}
                         {{/each}}
-                        <div data-product-option-change style="display:none;">
+                        <div data-product-option-change>
                             {{#each product.options}}
                             {{{dynamicComponent 'components/products/options'}}}
                             {{/each}}
@@ -54,18 +53,35 @@ product:
                                 <span data-product-stock>{{product.stock_level}}</span>
                             </label>
                         </div>
+                            <div class="form-field form-field--increments">
+                                <label class="form-label form-label--alternate"
+                                       for="qty[]">{{lang 'products.quantity'}}</label>
 
-                        <span class="">
-                            <input id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" type="submit"
-                                   value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}">>
-                        </span>
+                                <div class="form-increment" data-quantity-change>
+                                    <input class="form-input form-input--incrementTotal"
+                                           id="qty[]"
+                                           name="qty[]"
+                                           type="tel"
+                                           value="{{#if product.min_purchase_quantity}}{{product.min_purchase_quantity}}{{else}}1{{/if}}"
+                                           data-quantity-min="{{product.min_purchase_quantity}}"
+                                           data-quantity-max="{{product.max_purchase_quantity}}"
+                                           min="1"
+                                           pattern="[0-9]*"
+                                           aria-live="polite">
+                                </div>
+                            </div>
+                        <div class="">
+                            <div class="estimator-form-input--price" style="margin-bottom: 15px;font-weight: bolder;">{{product.price.without_tax.formatted}}</div>
+                            <input class="button button--primary-dark" id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" type="submit"
+                                   value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}" style="float: right;">
+                        </div>
 
                         {{#if product.out_of_stock}}
                         <div class="product--oos-mobile">
                         </div>
                         {{/if}}
                     </form>
-                    </span>
+                    </div>
 
                 </div>
             </div>
@@ -257,5 +273,23 @@ product:
     <p>Lorem ipsum dolor sit amet, sed in dicant imperdiet, possit labitur splendide sit ut. Eu dicam inimicus his, in eam inermis delicata theophrastus, dicit eruditi recusabo at sed. Cum id nisl euripidis, liber fabulas contentiones eum in, cu per ullum option vulputate. Expetenda interesset te mel, id usu viris sensibus, mei te perfecto accusata.</p>
 </div>
 
+<div id="previewModal" class="modal modal--large" data-reveal>
+    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+        <span aria-hidden="true">&#215;</span>
+    </a>
+    <div class="modal-content"></div>
+    <div class="loadingOverlay"></div>
+</div>
+<!-- our modal markup-->
+<div id="modal-custom" class="modal modal--large" data-reveal>
+    <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+        <span aria-hidden="true">&#215;</span>
+    </a>
+    <div class="modal-body">
+        {{#if product.videos.list.length}}
+        {{> components/products/videos product.videos}}
+        {{/if}}
+    </div>
+</div>
 {{/partial}}
 {{> layout/base}}
