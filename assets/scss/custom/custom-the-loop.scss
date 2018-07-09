@@ -197,10 +197,10 @@
   .loop--intro {
     position: relative;
     max-width: 100%;
-    margin: 10px;
+    margin: auto;
     img {
-      max-height: 65%;
-      max-width: 65%;
+      max-height: 100%;
+      max-width: 100%;
       @media only screen and (max-width: $breakpoint-small) {
         max-height: 90%;
         max-width: 90%;
@@ -222,13 +222,23 @@
         input[type='submit'] {
           text-decoration: none;
           font-weight: 800;
-          bottom: 50px;
+          margin-top: 10px;
 /*          background: none;
           border: none;
           -webkit-appearance: none;*/
         }
       }
-
+      .inline {
+        display: block;
+        .product-view-price {
+          .price-section--saving {
+            font-size: 12px;
+          }
+        }
+        button {
+          margin-top: 4em;
+        }
+      }
     }
   }
   .loop--pod {
@@ -295,24 +305,26 @@
   }
   .loop--video {
     position: relative;
-    max-width: 80%;
-    margin: 50px 8vw;
+    max-width: 100%;
+    margin: auto;
     padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    object {
+    video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
     }
+
   }
   .loop-gallery {
     position: relative;
     max-width: 80%;
     margin: 50px 8vw;
+    display: inline-flex;
     h1, h4 {
       text-align: center;
       text-transform: capitalize;
@@ -327,8 +339,14 @@
       font-size: 1.23em;
       margin-top: 0 !important;
     }
+    .images {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
     figure {
-      height: 100%;
+      height: auto;
       margin: 10px;
       figcaption {
         text-align: center;
@@ -338,7 +356,6 @@
       }
     }
     img {
-      max-height: 100%;
       max-width: 100%;
     }
     @include breakpoint($medium-only) {
@@ -395,5 +412,7 @@
     }
   }
   // Page elements end
-
+  .inline {
+    display: inline;
+  }
 }

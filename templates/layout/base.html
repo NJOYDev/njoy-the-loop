@@ -110,6 +110,22 @@
                     }, 1500);
                 }
             });
+            $("#scrollToPods").click(function(e) {
+                e.preventDefault();
+                if($('body').find("#specs").length !== 0) {
+                    $('html, body').animate({
+                        scrollTop: $("#pods").offset().top-120
+                    }, 1500);
+                }
+            });
+            $("#scrollToVideo").click(function(e) {
+                e.preventDefault();
+                if($('body').find("#specs").length !== 0) {
+                    $('html, body').animate({
+                        scrollTop: $("#video").offset().top-120
+                    }, 1500);
+                }
+            });
 		// Smooth Scroll @deepak
         $("#scrollOnClick").click(function() {
             if($('body').find("#productsView").length !== 0) {
