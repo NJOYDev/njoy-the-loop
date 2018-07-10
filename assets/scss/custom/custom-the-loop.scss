@@ -1,4 +1,4 @@
-.the-loop {
+.the-loop{
   // utility
 
   .left {
@@ -25,14 +25,14 @@
 
   // grid
 
-  $width: 90%;
+  $width: 100%;
   $gutter: 4%;
   $breakpoint-small: 33.75em; // 540px
   $breakpoint-med: 45em; // 720px
   $breakpoint-large: 60em; // 960px
 
   .container {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 
@@ -41,8 +41,8 @@
     }
 
     @media only screen and (min-width: $breakpoint-large) {
-      width: 75%;
-      max-width: 60rem;
+      width: 100%;
+      max-width: 80rem;
     }
   }
 
@@ -198,9 +198,12 @@
     position: relative;
     max-width: 100%;
     margin: auto;
+    .image {
+      text-align: center;
+    }
     img {
-      max-height: 100%;
-      max-width: 100%;
+      max-height: 50%;
+      max-width: 50%;
       @media only screen and (max-width: $breakpoint-small) {
         max-height: 90%;
         max-width: 90%;
@@ -214,9 +217,18 @@
     .description {
       padding-top: 2em;
       font-size: 1.32em;
+      .product-view-price {
+        font-weight: bolder;
+        .price-section--saving {
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+
     }
-    .price {
+    .price-with-options {
       font-size: 1.32em;
+      text-align: left;
       form {
         position: relative;
         input[type='submit'] {
@@ -242,28 +254,20 @@
     }
   }
   .loop--pod {
-    position: relative;
-    max-width: 80%;
-    margin: 10px 8vw;
-/*    border: 2px solid;
-    border-left-color: lightgreen;
-    border-right-color: lightblue;
-    border-top-color: lightcoral;
-    border-bottom-color: sandybrown;*/
-    padding: 2px;
-/*    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px #e8eff7;*/
+    max-width: 100%;
+    margin: 80px 0;
+    .flavors {
+      [class="col"] {
+        margin: 0 !important;;
+      }
+      a {
+        text-decoration: none ;
+      }
+    }
     figure {
       height: auto;
-      margin: 10px;
       img {
         max-height: 100%;
-/*        height: 400px;
-        width: 400px;
-        @media only screen and (max-width: $breakpoint-small) {
-          max-height: 90%;
-          max-width: 90%;
-        }*/
       }
       figcaption {
         text-align: center;
@@ -313,18 +317,23 @@
     overflow: hidden;
     video {
       position: absolute;
-      top: 0;
+      top: -20px;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 102%;
+      height: 102%;
+      &:after {
+          -webkit-box-sizing: content-box !important;
+          -moz-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+      }
     }
 
   }
   .loop-gallery {
     position: relative;
-    max-width: 80%;
-    margin: 50px 8vw;
-    display: inline-flex;
+    max-width: 100%;
+    margin: 50px 2vw;
+    display: inline-block;
     h1, h4 {
       text-align: center;
       text-transform: capitalize;
@@ -340,14 +349,17 @@
       margin-top: 0 !important;
     }
     .images {
-      width: 100%;
-      img {
-        width: 100%;
-      }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
     }
     figure {
-      height: auto;
       margin: 10px;
+      img {
+        width: 400px;
+        height: 400px;
+        object-fit: contain;
+      }
       figcaption {
         text-align: center;
         text-transform: capitalize;
@@ -355,24 +367,21 @@
         font-weight: bolder;
       }
     }
-    img {
-      max-width: 100%;
-    }
     @include breakpoint($medium-only) {
       display: none;
     }
   }
   .loop--specs {
     position: relative;
-    max-width: 80%;
-    margin: 50px 8vw;
+    max-width: 100%;
+    margin: 50px 2vw;
     .spec-title {
       position: relative;
       top: 0;
       left: 0;
       font-weight: bolder;
       h1 {
-        font-size: 1.32em;
+        font-size: 1.62em;
         margin-top: 0 !important;
         @media only screen and (max-width: $breakpoint-small) {
           font-size: 1.82em;

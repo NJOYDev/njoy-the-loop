@@ -25,17 +25,22 @@ product:
         </div>
         <div id="overview" class="row loop--intro">
             <h1 class="strong">{{product.title}}</h1>
-            <div class="col-4">
-                <p class="description">
+            <div class="col-4 description">
+                <p class="">
                     With 2 Sticks, 36-hour charging case and advanced nicotine delivery, you've got an endless pack of smokes in your pocket.
                 </p>
+                {{#if product.price}}
+                <div class="product-view-price">
+                    {{> components/products/price price=product.price schema_org=schema}}
+                </div>
+                {{/if}}
             </div>
-            <div class="col-4">
+            <div class="col-3 image" >
                 <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png" alt="the loop">
             </div>
             <div class="col-4">
                 <div class="price option-list">
-                    <div class="price">
+                    <div class="price-with-options">
                         <div>
                             <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
                                   data-cart-item-add>
@@ -44,7 +49,7 @@ product:
                                 {{#each product.customizations}}
                                 {{{dynamicComponent 'components/products/customizations'}}}
                                 {{/each}}
-                                <div style="margin-top: 2em;" data-product-option-change>
+                                <div data-product-option-change>
                                     {{#each product.options}}
                                     {{{dynamicComponent 'components/products/options'}}}
                                     {{/each}}
@@ -99,7 +104,7 @@ product:
                     </div>
                 </div>
             </div>
-        </div>`
+        </div>
         <div id="video" class="row loop--video">
             <div class="col-12">
                 <video controls="false"
@@ -136,7 +141,7 @@ product:
                 </div>
                 <div id="showPopThree" class="col-3">
                     <figure id="galleryThree">
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/529/V5.213_1__66805.1530650844.1280.1280.png"
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/530/V5.203_1__11054.1530650867.1280.1280.png"
                              alt="picture one">
                         <figcaption>Rapid Charge Accessory</figcaption>
 
@@ -156,12 +161,12 @@ product:
                 <div class="card row">
                     <div class="">
                         <div class="image col-12">
-                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/527/GRAY_sticks_1__17780.1530650543.1280.1280.png"
                                  alt="picture one">
                         </div>
                         <div class="description col-12">
-                            <h3>2 Rechargeable Battery Sticks</h3>
-                            <p>Lorem ipsum dolor sit amet, sed in dicant imperdiet, possit labitur splendide sit ut. Eu dicam inimicus his, in eam inermis delicata theophrastus, dicit eruditi recusabo at sed. Cum id nisl euripidis, liber fabulas contentiones eum in, cu per ullum option vulputate. Expetenda interesset te mel, id usu viris sensibus, mei te perfecto accusata.</p>
+                            <h3>2 Rechargeable Vaporizers </h3>
+                            <h4>So you never have to worry about running out of battery.</h4>
                         </div>
                     </div>
                 </div>
@@ -172,74 +177,76 @@ product:
                                  alt="picture one">
                         </div>
                         <div class="description col-12">
-                            <h3>2 Rechargeable Battery Sticks</h3>
-                            <p>Lorem ipsum dolor sit amet, sed in dicant imperdiet, possit labitur splendide sit ut. Eu dicam inimicus his, in eam inermis delicata theophrastus, dicit eruditi recusabo at sed. Cum id nisl euripidis, liber fabulas contentiones eum in, cu per ullum option vulputate. Expetenda interesset te mel, id usu viris sensibus, mei te perfecto accusata.</p>
+                            <h3>Sleek charging case</h3>
+                            <h4>Designed to carry and recharge your vaporizers on the go.</h4>
                         </div>
                     </div>
                 </div>
                 <div class="card row">
                     <div class="">
                         <div class="image col-12">
-                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/530/V5.203_1__11054.1530650867.1280.1280.png"
                                  alt="picture one">
                         </div>
                         <div class="description col-12">
-                            <h3>2 Rechargeable Battery Sticks</h3>
-                            <p>Lorem ipsum dolor sit amet, sed in dicant imperdiet, possit labitur splendide sit ut. Eu dicam inimicus his, in eam inermis delicata theophrastus, dicit eruditi recusabo at sed. Cum id nisl euripidis, liber fabulas contentiones eum in, cu per ullum option vulputate. Expetenda interesset te mel, id usu viris sensibus, mei te perfecto accusata.</p>
+                            <h3>Rapid Charge Accessory</h3>
+                            <h4>For on-the-go charging, plug into any USB.</h4>
                         </div>
                     </div>
                 </div>
                 <div class="card row">
                     <div class="">
                         <div class="image col-12">
-                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/540/153116414966459852__11523.1531164222.1280.1280.jpg"
                                  alt="picture one">
                         </div>
                         <div class="description col-12">
-                            <h3>2 Rechargeable Battery Sticks</h3>
-                            <p>Lorem ipsum dolor sit amet, sed in dicant imperdiet, possit labitur splendide sit ut. Eu dicam inimicus his, in eam inermis delicata theophrastus, dicit eruditi recusabo at sed. Cum id nisl euripidis, liber fabulas contentiones eum in, cu per ullum option vulputate. Expetenda interesset te mel, id usu viris sensibus, mei te perfecto accusata.</p>
+                            <h3>USB-USBc Power Cable</h3>
+                            <h4>Rapid charging cable.</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="specs" class="row loop--specs">
-            <div class="col-6 spec-title">
-                <h1>Sleek Charging Case</h1>
+        <div id="specs" class="spec-slide">
+            <div class="row loop--specs">
+                <div class="col-4 spec-title">
+                    <h1>Sleek Charging Case</h1>
+                </div>
+                <div class="col-7 spec-desc">
+                    <p class="description">
+                        Keep your sticks charged on the go. The Loop carrying case delivers 36 hours of dual-stick charging in a sleek device. No matter how much you use it, 1 stick is always ready to go.
+                    </p>
+                </div>
+                <div class="col-12 spec-image">
+                    <img src="https://images.unsplash.com/photo-1495098894060-d3bf72198549?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=26766955a575dcc8488066de0e1afa5f&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
+                </div>
             </div>
-            <div class="col-6 spec-desc">
-                <p class="description">
-                    Keep your sticks charged on the go. The Loop carrying case delivers 36 hours of dual-stick charging in a sleek device. No matter how much you use it, 1 stick is always ready to go.
-                </p>
+            <div class="row loop--specs">
+                <div class="col-4 spec-title">
+                    <h1>Duelling Batteries</h1>
+                </div>
+                <div class="col-7 spec-desc">
+                    <p class="description">
+                        The cylinder-shaped battery sticks mirror the form of cigarettes, and are compatible with replaceable Loop Pods that come in many flavors. Switch, twist and enjoy.
+                    </p>
+                </div>
+                <div class="col-12 spec-image">
+                    <img src="https://images.unsplash.com/photo-1528056800269-6d121c24de8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be9ad6e385e550c5167a6195b42a0c05&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
+                </div>
             </div>
-            <div class="col-12 spec-image">
-                <img src="https://images.unsplash.com/photo-1495098894060-d3bf72198549?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=26766955a575dcc8488066de0e1afa5f&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
-            </div>
-        </div>
-        <div class="row loop--specs">
-            <div class="col-4 spec-title">
-                <h1>Duelling Batteries</h1>
-            </div>
-            <div class="col-8 spec-desc">
-                <p class="description">
-                    The cylinder-shaped battery sticks mirror the form of cigarettes, and are compatible with replaceable Loop Pods that come in many flavors. Switch, twist and enjoy.
-                </p>
-            </div>
-            <div class="col-12 spec-image">
-                <img src="https://images.unsplash.com/photo-1528056800269-6d121c24de8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be9ad6e385e550c5167a6195b42a0c05&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
-            </div>
-        </div>
-        <div class="row loop--specs">
-            <div class="col-4 spec-title">
-                <h1>Packs A Punch</h1>
-            </div>
-            <div class="col-8 spec-desc">
-                <p class="description">
-                    Loop hits like a cigarette and doesn't let up. With advanced nicotine delivery system it remains consistent even as the battery wanes.
-                </p>
-            </div>
-            <div class="col-12 spec-image">
-                <img src="https://images.unsplash.com/photo-1500560239821-a6a6cb4701e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99717853f3a466004aab446df0d84c04&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
+            <div class="row loop--specs">
+                <div class="col-4 spec-title">
+                    <h1>Packs A Punch</h1>
+                </div>
+                <div class="col-7 spec-desc">
+                    <p class="description">
+                        Loop hits like a cigarette and doesn't let up. With advanced nicotine delivery system it remains consistent even as the battery wanes.
+                    </p>
+                </div>
+                <div class="col-12 spec-image">
+                    <img src="https://images.unsplash.com/photo-1500560239821-a6a6cb4701e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99717853f3a466004aab446df0d84c04&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
+                </div>
             </div>
         </div>
         <div id="pods" class="loop--pod row">
@@ -258,32 +265,27 @@ product:
                 </ol>
             </div>
             <div class="flavors">
-                <a href="/njoy-loop-classic-tobacco-pods/">
-                    <figure class="col-4">
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/192/images/531/tobacco_2__74661.1530894244.1280.1280.png" alt="">
-                        <figcaption>Classic Tobacco</figcaption>
-                    </figure>
-                </a>
-                <a href="/njoy-loop-cool-menthol-pods/">
-                    <figure class="col-4">
+                <span class="col-2 hide-on-mobile">&nbsp;</span>
+                <a  class="col-2" href="/njoy-loop-cool-menthol-pods/">
+                    <figure>
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/189/images/534/mint__84245.1530894302.1280.1280.png" alt="">
                         <figcaption> Cool Menthol</figcaption>
                     </figure>
                 </a>
-                <a href="/njoy-loop-blue-blackberry-pods/">
-                    <figure class="col-4">
+                <a  class="col-2" href="/njoy-loop-blue-blackberry-pods/">
+                    <figure>
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/190/images/533/blackblue__88918.1530894280.1280.1280.png" alt="">
                         <figcaption>Blue + Blackberry</figcaption>
                     </figure>
                 </a>
-                <a href="/njoy-loop-tropical-twist-pods/">
-                    <figure class="col-4">
+                <a  class="col-2" href="/njoy-loop-tropical-twist-pods/">
+                    <figure>
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/191/images/532/tropcial__51105.1530894260.1280.1280.png" alt="">
                         <figcaption>Tropical Twist</figcaption>
                     </figure>
                 </a>
-                <a href="/njoy-loop-rich-tobacco-pods/">
-                    <figure class="col-4">
+                <a  class="col-2" href="/njoy-loop-rich-tobacco-pods/">
+                    <figure>
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/188/images/535/rich_1__27144.1530894325.1280.1280.png" alt="">
                         <figcaption>Rich Tobacco</figcaption>
                     </figure>
