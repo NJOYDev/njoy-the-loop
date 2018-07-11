@@ -1,5 +1,5 @@
 {
-  "name": "Njoy_2018-06-22",
+  "name": "Njoy_2018-06-22 (2)",
   "version": "1.9.2",
   "meta": {
     "price": 0,
@@ -287,7 +287,8 @@
     "social_icon_placement_bottom": "bottom_none",
     "geotrust_ssl_common_name": "",
     "geotrust_ssl_seal_size": "M",
-    "navigation_design": "simple"
+    "navigation_design": "simple",
+    "warning_message": "WARNING: This product contains nicotine. Nicotine is an addictive chemical."
   },
   "read_only_files": [
     "/assets/scss/components/citadel",
@@ -579,7 +580,8 @@
         "social_icon_placement_bottom": "bottom_none",
         "geotrust_ssl_common_name": "",
         "geotrust_ssl_seal_size": "M",
-        "navigation_design": "simple"
+        "navigation_design": "simple",
+        "warning_message": "WARNING: This product contains nicotine. Nicotine is an addictive chemical."
       }
     }
   ]
