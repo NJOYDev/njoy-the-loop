@@ -202,12 +202,8 @@
       text-align: center;
     }
     img {
-      max-height: 50%;
-      max-width: 50%;
-      @media only screen and (max-width: $breakpoint-small) {
-        max-height: 90%;
-        max-width: 90%;
-      }
+      max-height: 90%;
+      max-width: 90%;
     }
     h1.strong {
       font-size: 2.3em;
@@ -216,7 +212,16 @@
     }
     .description {
       padding-top: 2em;
-      font-size: 1.32em;
+      font-size: 1.42em;
+      text-align: justify;
+      text-justify: inter-word;
+      a {
+        font-size: 16px;
+        &:hover {
+          color: blue;
+          text-decoration: none;
+        }
+      }
       .product-view-price {
         font-weight: bolder;
         .price-section--saving {
@@ -257,8 +262,8 @@
     max-width: 100%;
     margin: 80px 0;
     .flavors {
-      [class="col"] {
-        margin: 0 !important;;
+      .col-3 {
+        margin: 0.5rem 1% !important;
       }
       a {
         text-decoration: none ;
@@ -332,8 +337,7 @@
   .loop-gallery {
     position: relative;
     max-width: 100%;
-    margin: 50px 2vw;
-    display: inline-block;
+    margin: 50px 0;
     h1, h4 {
       text-align: center;
       text-transform: capitalize;
@@ -349,31 +353,45 @@
       margin-top: 0 !important;
     }
     .images {
-      display: flex;
+      text-align: center;
+      display: inline-flex;
       flex-direction: row;
-      justify-content: space-evenly;
-    }
-    figure {
-      margin: 10px;
-      img {
-        width: 400px;
-        height: 400px;
-        object-fit: contain;
+      justify-content: center;
+      @include breakpoint($large-only){
+        .card {
+          width: auto;
+          height: 400px;
+          figure {
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: cover;
+            }
+            figcaption {
+              text-align: center;
+              text-transform: capitalize;
+              font-size: 16px;
+              font-weight: bolder;
+            }
+          }
+        }
       }
-      figcaption {
-        text-align: center;
-        text-transform: capitalize;
-        font-size: 16px;
-        font-weight: bolder;
+      .card {
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
       }
+
     }
+
     @include breakpoint($medium-only) {
       display: none;
     }
   }
   .loop--specs {
     position: relative;
-    max-width: 100%;
+    max-width: 80%;
     margin: 50px 2vw;
     .spec-title {
       position: relative;
@@ -393,6 +411,7 @@
       font-weight: 400;
     }
     .spec-image {
+      text-align: center;
       max-width: 100%;
       max-height: 100%;
     }
@@ -424,4 +443,15 @@
   .inline {
     display: inline;
   }
+}
+
+@include breakpoint($small-only) {
+  .slick_prev,
+  .slick-next {
+    display: none !important;
+  }
+}
+
+.offer {
+  font-size: 16px;
 }

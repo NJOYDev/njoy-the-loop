@@ -19,7 +19,7 @@ product:
                 <li id="scrollToOverview">Overview</li>
                 <li id="scrollToVideo">Watch Video</li>
                 <li id="scrollToSpecs">Tech Specs</li>
-                <li id="scrollToPods"></a>Loops Pods</li>
+                <li id="scrollToPods">Flavor Pods</li>
                 <!--<li class="order"><a href="#"></a>Pre-Order</li>-->
             </ul>
         </div>
@@ -27,13 +27,10 @@ product:
             <h1 class="strong">{{product.title}}</h1>
             <div class="col-4 description">
                 <p class="">
-                    With 2 Sticks, 36-hour charging case and advanced nicotine delivery, you've got an endless pack of smokes in your pocket.
+                    Meet NJOY Loop – a revolutionary product that ensures you will never run out of vape. The sleek, handcrafted battery charging pack comes with 2 rechargeable vaporizers and features an advanced nicotine delivery system that hits hard and stays strong, all day long. One stays charged, while one is in use. Meet the future of vaping.
+                    <br>
+                    <a href="#" data-reveal-id="loopOfferModal">Click for special pre-order pricing. </a>
                 </p>
-                {{#if product.price}}
-                <div class="product-view-price">
-                    {{> components/products/price price=product.price schema_org=schema}}
-                </div>
-                {{/if}}
             </div>
             <div class="col-3 image" >
                 <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png" alt="the loop">
@@ -107,8 +104,9 @@ product:
         </div>
         <div id="video" class="row loop--video">
             <div class="col-12">
-                <video controls="false"
-                       src="{{cdn 'webdav:/NJOY_rough_03.mp4'}}"
+                <video controls
+                       poster="{{cdn 'webdav:/NJOY_loop_poster.png'}}"
+                       src="{{cdn 'webdav:/NJOY_LOOP_FINAL.webm'}}"
                        width="900"
                        height="450">
                     Sorry, your browser doesn't support embedded videos.
@@ -125,29 +123,29 @@ product:
                 - Loop Pods sold separately -
             </h4>
             <div class="images">
-                <div class="col-3" id="showPopOne">
-                    <figure id="galleryOne">
+                <div class="card" id="showPopOne">
+                    <figure id="galleryOne" style="height: 400px;">
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/527/GRAY_sticks_1__17780.1530650543.1280.1280.png"
                              alt="picture one">
                         <figcaption>2 Rechargeable Vaporizers </figcaption>
                     </figure>
                 </div>
-                <div id="showPopTwo" class="col-3">
+                <div id="showPopTwo" class="card">
                     <figure id="galleryTwo">
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
-                             alt="picture one">
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/542/pack__62908.1531239229.1280.1280.png"
+                             alt="picture one" style="height: 400px;">
                         <figcaption>Sleek charging case</figcaption>
                     </figure>
                 </div>
-                <div id="showPopThree" class="col-3">
+                <div id="showPopThree" class="card">
                     <figure id="galleryThree">
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/530/V5.203_1__11054.1530650867.1280.1280.png"
-                             alt="picture one">
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/543/charge-a__86590.1531239462.1280.1280.png"
+                             alt="picture one" style="height: 400px;">
                         <figcaption>Rapid Charge Accessory</figcaption>
 
                     </figure>
                 </div>
-                <div id="showPopFour" class="col-3">
+                <div id="showPopFour" class="card" style="height: 400px;">
                     <figure id="galleryFour">
                         <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/540/153116414966459852__11523.1531164222.1280.1280.jpg"
                              alt="picture one">
@@ -173,7 +171,7 @@ product:
                 <div class="card row">
                     <div class="">
                         <div class="image col-12">
-                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/522/RECHARGE_copy__67404.1530153514.1280.1280.png"
+                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/542/pack__62908.1531239229.1280.1280.png"
                                  alt="picture one">
                         </div>
                         <div class="description col-12">
@@ -185,7 +183,7 @@ product:
                 <div class="card row">
                     <div class="">
                         <div class="image col-12">
-                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/530/V5.203_1__11054.1530650867.1280.1280.png"
+                            <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/543/charge-a__86590.1531239462.1280.1280.png"
                                  alt="picture one">
                         </div>
                         <div class="description col-12">
@@ -208,85 +206,101 @@ product:
                 </div>
             </div>
         </div>
-        <div id="specs" class="spec-slide">
-            <div class="row loop--specs">
-                <div class="col-4 spec-title">
-                    <h1>Sleek Charging Case</h1>
+        <div id="specs" class="tech-specs">
+            <h1 class="title" style="text-align:center">Technical Specifications</h1>
+            <div class="row" style="font-size: 16px;">
+                <div class="col-1">&nbsp;</div>
+                <div class="col-3">
+                    <p><strong>Weight</strong></p>
+                    <p></p>
+                    <p><strong>Materials</strong></p>
+                    <p>Zinc, Polycarbonate & Steel</p>
+                    <p><strong>Finish</strong></p>
+                    <p>Metallic paint w/ soft touch coating</p>
                 </div>
-                <div class="col-7 spec-desc">
-                    <p class="description">
-                        Keep your sticks charged on the go. The Loop carrying case delivers 36 hours of dual-stick charging in a sleek device. No matter how much you use it, 1 stick is always ready to go.
-                    </p>
+                <div class="col-3">
+                    <p><strong>Dimensions</strong></p>
+                    <p>W: 2.34 in.</p>
+                    <p>L: 4.86 in.</p>
+                    <p>D: 0.6 in.</p>
                 </div>
-                <div class="col-12 spec-image">
-                    <img src="https://images.unsplash.com/photo-1495098894060-d3bf72198549?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=26766955a575dcc8488066de0e1afa5f&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
+                <div class="col-4">
+                    <p><strong>Charging Requirements / Instructions:</strong></p>
+                    <p>USBc charger included.</p>
+                    <p>Bottom light flashing GREEN = Fully Charged</p>
+                    <p>Bottom light flashing BLUE = Medium battery life</p>
+                    <p>Bottom light flashing RED = Low batter, please plug unit in.</p>
                 </div>
             </div>
-            <div class="row loop--specs">
-                <div class="col-4 spec-title">
-                    <h1>Duelling Batteries</h1>
+            <div class="spec-slide">
+                <div class="row loop--specs">
+                    <div class="col-4 spec-title">
+                        <h1>Sleek Charging Case</h1>
+                    </div>
+                    <div class="col-7 spec-desc">
+                        <p class="description">
+                            Keep your sticks charged on the go. The Loop carrying case delivers 36 hours of dual-stick charging in a sleek device. No matter how much you use it, 1 stick is always ready to go.
+                        </p>
+                    </div>
+                    <div class="col-12 spec-image">
+                        <img src="{{cdn 'webdav:/img/loop-lifestyle/1.jpg'}}" alt="placeholder">
+                    </div>
                 </div>
-                <div class="col-7 spec-desc">
-                    <p class="description">
-                        The cylinder-shaped battery sticks mirror the form of cigarettes, and are compatible with replaceable Loop Pods that come in many flavors. Switch, twist and enjoy.
-                    </p>
+                <div class="row loop--specs">
+                    <div class="col-4 spec-title">
+                        <h1>Duelling Batteries</h1>
+                    </div>
+                    <div class="col-7 spec-desc">
+                        <p class="description">
+                            The cylinder-shaped battery sticks mirror the form of cigarettes, and are compatible with replaceable Loop Pods that come in many flavors. Switch, twist and enjoy.
+                        </p>
+                    </div>
+                    <div class="col-12 spec-image">
+                        <img src="{{cdn 'webdav:/img/loop-lifestyle/3.jpg'}}" alt="placeholder">
+                    </div>
                 </div>
-                <div class="col-12 spec-image">
-                    <img src="https://images.unsplash.com/photo-1528056800269-6d121c24de8c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be9ad6e385e550c5167a6195b42a0c05&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
-                </div>
-            </div>
-            <div class="row loop--specs">
-                <div class="col-4 spec-title">
-                    <h1>Packs A Punch</h1>
-                </div>
-                <div class="col-7 spec-desc">
-                    <p class="description">
-                        Loop hits like a cigarette and doesn't let up. With advanced nicotine delivery system it remains consistent even as the battery wanes.
-                    </p>
-                </div>
-                <div class="col-12 spec-image">
-                    <img src="https://images.unsplash.com/photo-1500560239821-a6a6cb4701e0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=99717853f3a466004aab446df0d84c04&auto=format&fit=crop&w=1350&q=80" alt="placeholder">
+                <div class="row loop--specs">
+                    <div class="col-4 spec-title">
+                        <h1>Packs A Punch</h1>
+                    </div>
+                    <div class="col-7 spec-desc">
+                        <p class="description">
+                            Loop hits like a cigarette and doesn't let up. With advanced nicotine delivery system it remains consistent even as the battery wanes.
+                        </p>
+                    </div>
+                    <div class="col-12 spec-image">
+                        <img src="{{cdn 'webdav:/img/loop-lifestyle/4.jpg'}}" alt="placeholder">
+                    </div>
                 </div>
             </div>
         </div>
         <div id="pods" class="loop--pod row">
             <h1 class="title">
-                The Loop Pods
+                Flavor Pods
             </h1>
-            <h4 class="subtitle"> Many Flavors To Choose From! <span class="green">Sold Separately.</span></h4>
-            <div class="col-12">
-                <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. As simple as 1-2-3.
-                </p>
-                <ol class="description">
-                    <li><a href="#">Pre-Order The Loop</a></li>
-                    <li><a href="#">Choose and shop the Loop Pod in your favorite flavor.</a></li>
-                    <li>NJoy!</li>
-                </ol>
-            </div>
-            <div class="flavors">
-                <span class="col-2 hide-on-mobile">&nbsp;</span>
-                <a  class="col-2" href="/njoy-loop-cool-menthol-pods/">
+            <h4 class="subtitle"> Available in four delicious flavors you know & love from the NJOY Daily <!--<span class="green">Sold Separately.</span>--></h4>
+            <div class="flavors row">
+                <a  class="col-3" href="/njoy-loop-cool-menthol-pods/">
                     <figure>
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/189/images/534/mint__84245.1530894302.1280.1280.png" alt="">
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/189/images/546/mint__44287.1531243760.1280.1280.png" alt="">
                         <figcaption> Cool Menthol</figcaption>
                     </figure>
                 </a>
-                <a  class="col-2" href="/njoy-loop-blue-blackberry-pods/">
+                <a  class="col-3" href="/njoy-loop-blue-blackberry-pods/">
                     <figure>
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/190/images/533/blackblue__88918.1530894280.1280.1280.png" alt="">
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/190/images/545/blackblue__35423.1531243741.1280.1280.png" alt="">
                         <figcaption>Blue + Blackberry</figcaption>
                     </figure>
                 </a>
-                <a  class="col-2" href="/njoy-loop-tropical-twist-pods/">
+                <a  class="col-3" href="/njoy-loop-tropical-twist-pods/">
                     <figure>
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/191/images/532/tropcial__51105.1530894260.1280.1280.png" alt="">
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/191/images/544/tropcial__51554.1531243708.1280.1280.png" alt="">
                         <figcaption>Tropical Twist</figcaption>
                     </figure>
                 </a>
-                <a  class="col-2" href="/njoy-loop-rich-tobacco-pods/">
+                <a  class="col-3" href="/njoy-loop-rich-tobacco-pods/">
                     <figure>
-                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/188/images/535/rich_1__27144.1530894325.1280.1280.png" alt="">
+                        <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/188/images/547/tobacco__54380.1531243815.1280.1280.png" alt="">
                         <figcaption>Rich Tobacco</figcaption>
                     </figure>
                 </a>
@@ -305,6 +319,30 @@ product:
 </div>
 <div id="galleryPopFour" class="center" style="display: none;">
     <h3>Rapid charging cable.</h3>
+</div>
+<div id="loopOfferModal" class="modal modal--medium" data-reveal>
+    <div class="modal-header">
+        <h2 class="modal-header-title">The Loop - Pre-Order Special Pricing</h2>
+        <a href="#" class="modal-close" aria-label="Close"><span aria-hidden="true">&#215;</span></a>
+    </div>
+    <div class="modal-body">
+        <div class="">
+            <div class="">
+                <div class="">
+                    <div class="offer">
+                        <p>As part of our special introductory Loop pre-order , we’re offering special VIP pricing:</p>
+                        <ul>
+                            <li>First 250 Orders = 50% Off using coupon code <strong>TheLoopFirst</strong> at checkout</li>
+                            <li>Next 250 Orders = 40% Off using coupon code <strong>TheLoopSecond</strong> at checkout</li>
+                            <li>Regular Pre-order Pricing = 20% off</li>
+                        </ul>
+                    </div>
+                    <p><span>*</span>Pre-orders will be shipped in late August, your credit card will be charged upon order</p>
+                    <p><span>**</span>All Loop pre-orders come with our 30 day satisfaction guaranteed promise, once you receive it, if you are not completely satisfied, return it for a full refund</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {{/partial}}
 {{> layout/base}}

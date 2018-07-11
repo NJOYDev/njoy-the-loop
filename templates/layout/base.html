@@ -210,11 +210,20 @@
                 $('.slide-class').slick({
                     swipe: true,
 					arrows: true,
-					dots: true
+					dots: true,
                 });
                 $('.spec-slide').slick({
                     swipe: true,
-                    dots: true
+                    dots: true,
+					arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                arrows: false,
+                            }
+                        }
+					]
                 });
             });
 
