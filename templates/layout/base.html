@@ -211,6 +211,20 @@
                     swipe: true,
 					arrows: true,
 					dots: true,
+                    responsive: [
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                arrows: false,
+                            }
+                        },
+                        {
+                            breakpoint: 780,
+                            settings: {
+                                arrows: false,
+                            }
+                        }
+                    ]
                 });
                 $('.spec-slide').slick({
                     swipe: true,
@@ -219,6 +233,12 @@
                     responsive: [
                         {
                             breakpoint: 480,
+                            settings: {
+                                arrows: false,
+                            }
+                        },
+                        {
+                            breakpoint: 780,
                             settings: {
                                 arrows: false,
                             }

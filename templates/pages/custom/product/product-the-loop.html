@@ -1,13 +1,13 @@
 ---
 product:
-  videos:
-    limit: {{theme_settings.productpage_videos_count}}
-  reviews:
-    limit: {{theme_settings.productpage_reviews_count}}
-  related_products:
-    limit: {{theme_settings.productpage_related_products_count}}
-  similar_by_views:
-    limit: {{theme_settings.productpage_similar_by_views_count}}
+videos:
+limit: {{theme_settings.productpage_videos_count}}
+reviews:
+limit: {{theme_settings.productpage_reviews_count}}
+related_products:
+limit: {{theme_settings.productpage_related_products_count}}
+similar_by_views:
+limit: {{theme_settings.productpage_similar_by_views_count}}
 ---
 
 {{#partial "page"}}
@@ -104,11 +104,12 @@ product:
         </div>
         <div id="video" class="row loop--video">
             <div class="col-12">
-                <video controls
-                       poster="{{cdn 'webdav:/NJOY_loop_poster.png'}}"
-                       src="{{cdn 'webdav:/njoy_final.mp4'}}"
+                <video controls="true"
                        width="900"
-                       height="450">
+                       height="450"
+                       poster="{{cdn 'webdav:/NJOY_loop_poster.png'}}">
+                    <source src="{{cdn 'webdav:/njoy_final.webm'}}" type="video/webm">
+                    <source src="{{cdn 'webdav:/njoy_final.mp4'}}" type="video/mp4">
                     Sorry, your browser doesn't support embedded videos.
                 </video>
                 <!--<object class="vid" data="https://www.youtube.com/embed/cLtRhVpwOgA"
@@ -154,24 +155,6 @@ product:
                 </div>
             </div>
         </div>
-        <!--<div class="row gallery">
-            <div class="col-4 img-container">
-                <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/186/images/527/GRAY_sticks_1__17780.1530650543.1280.1280.png"
-                     alt="picture one">
-            </div>
-            <div class="col-4 img-container">
-                <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/542/pack__62908.1531239229.1280.1280.png"
-                     alt="picture one">
-            </div>
-            <div class="col-4 img-container">
-                <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/543/charge-a__86590.1531239462.1280.1280.png"
-                     alt="picture one">
-            </div>
-            <div class="col-4 img-container">
-                <img src="https://cdn8.bigcommerce.com/s-41vy970mga/products/193/images/540/153116414966459852__11523.1531164222.1280.1280.jpg"
-                     alt="picture one">
-            </div>
-        </div>-->
         <div class="hide-on-desktop row loop--slider">
             <div class="slide-class">
                 <div class="card row">
@@ -230,7 +213,7 @@ product:
                 <div class="col-1">&nbsp;</div>
                 <div class="col-3">
                     <p><strong>Weight</strong></p>
-                    <p></p>
+                    <p>32.00 Ounces</p>
                     <p><strong>Materials</strong></p>
                     <p>Zinc, Polycarbonate & Steel</p>
                     <p><strong>Finish</strong></p>
